@@ -1,11 +1,13 @@
-Keywords:
-    Types: 
-    Method: 
-    Property: 
-    Function
-    Underscore: _
+1.Keywords:
+	Types: 
+	Method: 
+	Property: 
+	Function
+	Underscore: _
 
 ------------------------------------------------------
+2. Conditional branch
+
 if () {
 
 } else if () {
@@ -16,7 +18,7 @@ if () {
 
 
 ------------------------------------------------------
-
+3. Method
 
 public static void function(int a, int b, String c) { return ;
     
@@ -24,6 +26,7 @@ public static void function(int a, int b, String c) { return ;
 
 
 ------------------------------------------------------
+4. switch
 
 switch (a) {
     case 1:
@@ -58,14 +61,17 @@ public static int getValue(int a) { return ;
 }
 
 ------------------------------------------------------
-
+5. Loop
 for (int i = 0; i < 10; i++) {
     
 }
 
+// check condition before do
 while (true) {
-    
+	break;
 }
 
-
-------------------------------------------------------
+// do first then check condition
+do {
+	continue;
+} while ()
