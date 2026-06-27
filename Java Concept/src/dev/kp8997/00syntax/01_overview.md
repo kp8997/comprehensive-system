@@ -5,7 +5,7 @@ Keywords:
     Function
     Underscore: _
 
-
+------------------------------------------------------
 if () {
 
 } else if () {
@@ -14,9 +14,16 @@ if () {
     
 }
 
+
+------------------------------------------------------
+
+
 public static void function(int a, int b, String c) { return ;
     
 }
+
+
+------------------------------------------------------
 
 switch (a) {
     case 1:
@@ -37,6 +44,20 @@ switch (a) {
     }
 }
 
+// yield must be inside the { } 
+public static int getValue(int a) { return ;
+    return switch (a > 1) {
+        case 1 -> { yield 5;}
+        case 2: case 3: case 4: {
+            yield 10;
+        }
+        default -> {
+            yield 10;
+        }
+    }
+}
+
+------------------------------------------------------
 
 for (int i = 0; i < 10; i++) {
     
@@ -45,3 +66,6 @@ for (int i = 0; i < 10; i++) {
 while (true) {
     
 }
+
+
+------------------------------------------------------
