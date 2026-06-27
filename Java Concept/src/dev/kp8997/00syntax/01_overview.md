@@ -75,3 +75,17 @@ while (true) {
 do {
 	continue;
 } while ()
+
+------------------------------------------------------
+6. Console input
+
+// NOT EASY TO USE
+System.in
+
+// KIND OF EASY
+System.console
+
+// EASY TO USE
+Scanner sc = new Scanner(System.in);
+sc.nextInt();
+sc.nextLine();
