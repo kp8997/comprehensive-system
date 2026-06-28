@@ -13,9 +13,35 @@
     In its most common form, an interface is a group of related methods with empty bodies.
 
 **What is a Package**
-    A package is a namespace that organizes a set of related classes and interfaces.
+    A package is a namespace that organizes a set of related classes and interfaces. Conceptually you can think of packages as being similar to different folders on your computer.
     Packages help prevent naming conflicts between classes and provide a simple way to control access to class
 
 ======================================================
+
+Questions
+Real-world objects contain ___ and ___.
+    => fields and methods or state and behavior
+A software object's state is stored in ___.
+    => Fields
+A software object's behavior is exposed through ___.
+    => methods
+Hiding internal data from the outside world, and accessing it only through publicly exposed methods is known as data ___.
+    => encapsulation
+A blueprint for a software object is called a ___.
+    => class
+Common behavior can be defined in a ___ and inherited into a ___ using the ___ keyword.
+    => class, class, extends
+A collection of methods with no implementation is called an ___.
+    => interface
+A namespace that organizes classes and interfaces by functionality is called a ___.
+    => package
+The term API stands for ___?
+    => Application Programming Interface
+
+Exercises
+Create new classes for each real-world object that you observed at the beginning of this trail. Refer to the Bicycle class if you forget the required syntax.
+For each new class that you've created above, create an interface that defines its behavior, then require your class to implement it. Omit one or two methods and try compiling. What does the error look like?
+
+
 
 How to design a feature base on OOP classes and interfaces
