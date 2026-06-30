@@ -7,12 +7,19 @@
     public: every classes can access
 
 3. constructor
-    super(params)
-    this(params)
+    Without specific constructor declaration, a default constructor will be created automatically
+    With declaration:
+        super(params)
+        this(params)
 
-4. static and instance
-    instance method can invoke instance and static methods
-    static method can invoke only static methods
+
+4. static, instance and reference
+    fields:
+        static - apply for all objects
+        instance - apply for each object. A instance have their own reference. If variables have the same reference, meaning that they point to the same instance (object)
+    methods:
+        instance method can invoke instance and static methods
+        static method can invoke only static methods
     
 
 5. inheritance
