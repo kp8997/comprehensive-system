@@ -30,3 +30,5 @@
     override
     
 7. interface
+
+8. Encapsulation
