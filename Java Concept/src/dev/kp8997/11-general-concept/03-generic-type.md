@@ -30,6 +30,8 @@ polymorphism
 Advance concept (not need to bear in mind)
 
 To cleanly manage these behaviors during application design, use the PECS architectural guideline:
-•	Producer (extends): If your generic structure strictly provides data for your method to read, use ? extends T.
-•	Consumer (super): If your generic structure strictly consumes incoming data written by your method, use ? super T.
-•	No Wildcard: If your structure must act as both a Producer and a Consumer simultaneously within the same method footprint, do not use wildcards at all. Use an exact explicit type parameter (e.g., List<T>).
+	Producer (extends): If your generic structure strictly provides data for your method to read, use ? extends T.
+        read method like get
+	Consumer (super): If your generic structure strictly consumes incoming data written by your method, use ? super T.
+        write method like add
+	No Wildcard: If your structure must act as both a Producer and a Consumer simultaneously within the same method footprint, do not use wildcards at all. Use an exact explicit type parameter (e.g., List<T>).
