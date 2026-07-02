@@ -12,7 +12,6 @@
         super(params)
         this(params)
 
-
 4. static, instance and reference
     fields:
         static - apply for all objects
@@ -32,3 +31,5 @@
 7. interface
 
 8. Encapsulation
+
+9. Abstraction
