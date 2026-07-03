@@ -19,14 +19,14 @@ polymorphism
     lowerbound: Animal or any parent of Animal class
         public <T super Animal> void setData(T data) {}
     
-    wildcard
+    wildcard: When use wildcard, the declaration like Animal<T> is not needed
         upperbound: List<? extends Animal>
             can only take Animal or any subclass of Animal class
         lowerbound: List<? super Animal>
             can only take Animal or any parent of Animal class
         
     
-===================
+============================
 Advance concept (not need to bear in mind)
 
 To cleanly manage these behaviors during application design, use the PECS architectural guideline:
