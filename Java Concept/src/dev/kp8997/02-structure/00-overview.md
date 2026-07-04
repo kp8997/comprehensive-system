@@ -64,11 +64,10 @@ We also have Collections (Utility class) for some static methods operations
 ======================================================
 ***Summary***
 
-    When will I choose List, Set, Map and property like: Queue, Hash, Tree, Linked?
+When will I choose structure List, Set, Map?
 
     List: If the order of elements matters, or if you need to store duplicates.
-        ArrayList
-        LinkedList
+
     Set: If you need to store only unique elements (no duplicates).
 
     Map: If you need to store key-value pairs.
@@ -78,3 +77,24 @@ We also have Collections (Utility class) for some static methods operations
     Array: When you need a fixed-size collection.
 
     ArrayList: When you need a dynamic-size collection.
+
+When i choose property after structure:
+
+    Hash: Use hash for faster lookups
+    
+    Tree: Use tree for sorted order
+    
+    Linked: Use linked list for insertion order
+
+    Queue: For easy access and retrieve by order direction such as FIFO or LIFO
+        
+
+======================================================
+***Advance Insight Question***
+
+What case and why we need:
+    sorted order:
+    faster lookup:
+    insertion order:
+    FIFO and LIFO:
+    
