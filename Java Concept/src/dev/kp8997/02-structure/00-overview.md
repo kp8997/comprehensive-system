@@ -1,7 +1,7 @@
 
 ## We have list of collections for structure (column) and trait (row) below.
-        Array (single dimension)
-        
+        Array: Back by fixed size, static structure, primitive type
+
     List: An ordered collection that maintains insertion order and allows duplicate elements. You can access elements instantly using an index.
         LinkedList:
             Property: Backed by a doubly-linked sequence of nodes.
