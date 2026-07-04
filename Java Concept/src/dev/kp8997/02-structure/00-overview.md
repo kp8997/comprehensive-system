@@ -13,12 +13,8 @@
             Why: It provides O(1) constant-time lookup performance via indexing.
             E.g: Fetching a read-only list of product catalog items to display on a webpage.
 
-    Queue:
-        PriorityQueue:
-            Property:
-            When
-            Why
-            E.g:
+    Queue/Deque:
+        LinkedList: The same as above, they also implements Deque interface
         ArrayDeque:
             Property:
             When:
@@ -26,17 +22,17 @@
             E.g:
 
     Set: Sets focus strictly on uniqueness. They prohibit duplicate elements. If you try to add an existing element, the operation returns false.
-        HashSet
+        HashSet: Backed by a hash table; offers no order guarantees.
             Property:
             When
             Why
             E.g:
-        TreeSet
+        TreeSet: Backed by a Red-Black tree; elements are sorted naturally or by a custom comparator.
             Property:
             When
             Why
             E.g:
-        LinkedHashSet
+        LinkedHashSet: Maintains a doubly-linked list running through the hash table to preserve insertion order.
             Property:
             When
             Why
@@ -68,7 +64,7 @@ We also have Collections (Utility class) for some static methods operations
 ======================================================
 ***Summary***
 
-    When will I choose List, Set, Map?
+    When will I choose List, Set, Map and property like: Queue, Hash, Tree, Linked?
 
     List: If the order of elements matters, or if you need to store duplicates.
         ArrayList
