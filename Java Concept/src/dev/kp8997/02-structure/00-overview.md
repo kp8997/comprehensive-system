@@ -1,4 +1,5 @@
-We have list of collections for structure (column) and trait (row) below
+
+## We have list of collections for structure (column) and trait (row) below.
         Array (single dimension)
     List: An ordered collection that maintains insertion order and allows duplicate elements. You can access elements instantly using an index.
         LinkedList:
@@ -12,20 +13,51 @@ We have list of collections for structure (column) and trait (row) below
             Why: It provides O(1) constant-time lookup performance via indexing.
             E.g: Fetching a read-only list of product catalog items to display on a webpage.
 
-    Queue
-        PriorityQueue
-        ArrayDeque
+    Queue:
+        PriorityQueue:
+            Property:
+            When
+            Why
+            E.g:
+        ArrayDeque:
+            Property:
+            When:
+            Why:
+            E.g:
 
-    Set
+    Set: Sets focus strictly on uniqueness. They prohibit duplicate elements. If you try to add an existing element, the operation returns false.
         HashSet
+            Property:
+            When
+            Why
+            E.g:
         TreeSet
+            Property:
+            When
+            Why
+            E.g:
         LinkedHashSet
+            Property:
+            When
+            Why
+            E.g:
 
     Map (Separate but related)
         HashMap
+            Property:
+            When
+            Why
+            E.g:
         TreeMap
+            Property:
+            When
+            Why
+            E.g:
         LinkedHashMap
-
+            Property:
+            When
+            Why
+            E.g:
 
 ======================================================
 ***General Concepts***
