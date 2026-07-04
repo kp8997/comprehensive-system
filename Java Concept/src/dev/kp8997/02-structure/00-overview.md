@@ -1,6 +1,7 @@
 
 ## We have list of collections for structure (column) and trait (row) below.
         Array (single dimension)
+        
     List: An ordered collection that maintains insertion order and allows duplicate elements. You can access elements instantly using an index.
         LinkedList:
             Property: Backed by a doubly-linked sequence of nodes.
@@ -38,7 +39,7 @@
             Why
             E.g:
 
-    Map (Separate but related)
+    Map (Separate from collection framework but related)
         HashMap
             Property:
             When
@@ -56,15 +57,18 @@
             E.g:
 
 ======================================================
-***General Concepts***
-All of those implements Collection interface
 
-We also have Collections (Utility class) for some static methods operations
+***General Concepts***
+
+- All of those implements Collection interface
+
+- We also have Collections (Utility class) for some static methods operations
 
 ======================================================
+
 ***Summary***
 
-When will I choose structure List, Set, Map?
+- When will I choose structure List, Set, Map?
 
     List: If the order of elements matters, or if you need to store duplicates.
 
@@ -78,7 +82,7 @@ When will I choose structure List, Set, Map?
 
     ArrayList: When you need a dynamic-size collection.
 
-When i choose property after structure:
+- When i choose property after structure:
 
     Hash: Use hash for faster lookups
     
@@ -90,6 +94,7 @@ When i choose property after structure:
         
 
 ======================================================
+
 ***Advance Insight Question***
 
 What case and why we need:
