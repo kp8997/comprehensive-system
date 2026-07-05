@@ -19,48 +19,48 @@
         ArrayDeque:
             Property: Stack, you need a pure FIFO queue or a LIFO (Last-In, First-Out) stack.
             When: Managing an asynchronous message buffer or task pipeline where requests must be processed in the exact order they hit the server.
-            Why:
-            E.g:
+            Why: It is significantly faster and uses less memory than Stack or LinkedList.
+            E.g: Managing an asynchronous message buffer or task pipeline where requests must be processed in the exact order they hit the server.
         PriorityQueue:
-            Property:
-            When
-            Why
-            E.g:
+            Property: a PriorityQueue is backed by a Priority Heap (unbounded balanced binary heap binary tree). Elements are processed based on their natural priority or a custom comparator (not FIFO).
+            When: Items have varying emergency levels and cannot simply be processed by arrival time.
+            Why: Elements are positioned based on their priority, determined by natural ordering or a Comparator supplied at instantiation time. The element with the highest priority is always placed at the head of the queue and disgorged first (O(log n) for insertion and extraction).
+            E.g: A network router triaging data packets, where premium-tier user traffic bypasses standard traffic.
 
 
     Set: Sets focus strictly on uniqueness. They prohibit duplicate elements. If you try to add an existing element, the operation returns false.
-        HashSet: Backed by a hash table; offers no order guarantees.
-            Property:
-            When
-            Why
-            E.g:
-        TreeSet: Backed by a Red-Black tree; elements are sorted naturally or by a custom comparator.
-            Property:
-            When
-            Why
-            E.g:
-        LinkedHashSet: Maintains a doubly-linked list running through the hash table to preserve insertion order.
-            Property:
-            When
-            Why
-            E.g:
+        HashSet: 
+            Property: Backed by a hash table; offers no order guarantees.
+            When: need high-performance storage and lookup for unique items
+            Why: It provides rapid O(1) time complexity for basic operations like add, remove, and contains.
+            E.g: Storing a collection of unique IP addresses filtering through a firewall to prevent duplication logs.
+        TreeSet: 
+            Property: Backed by a Red-Black tree; elements are sorted naturally or by a custom comparator.
+            When: Your elements must automatically stay sorted at all times.
+            Why: Instead, every time an element is added, the tree balances itself, ensuring that elements are dynamically ordered either by their natural ordering or by a custom Comparator. Because it operates as a tree structure, operations like add, remove, and contains take O(log n) logarithmic time.
+            E.g: Managing a live leaderboard of high scores where elements must remain in ascending or descending order.
+        LinkedHashSet:
+            Property:  Maintains a doubly-linked list running through the hash table to preserve insertion order.
+            When: need a collection of unique items but must preserve the exact chronological sequence in which they arrived.
+            Why: uses the doubly-linked list to record the exact chronological order in which elements are inserted. It maintains O(1) time complexity for fundamental operations (add, contains, remove) while adding a tiny memory overhead for maintaining the node pointers.
+            E.g: Building a "Recently Viewed Items" widget where duplicates are ignored but the history order matters.
 
     Map (Separate from collection framework but related)
-        HashMap
-            Property:
-            When
-            Why
-            E.g:
-        TreeMap
-            Property:
-            When
-            Why
-            E.g:
-        LinkedHashMap
-            Property:
-            When
-            Why
-            E.g:
+        HashMap: 
+            Property: High-speed, unsorted key-value storage.
+            When: need to instantly look up records using a unique ID or key.
+            Why: it jumps directly to the calculated bucket index, it bypasses iterative loops entirely, offering blistering $O(1)$ constant-time performance for get() and put() operations. It offers no order guarantees.
+            E.g: Creating an in-memory session cache where a unique SessionID instantly fetches a user's profile details.
+        TreeMap: 
+            Property: Keys are sorted in natural or custom order.
+            When: need key-value pairs sorted dynamically by the keys.
+            Why: It implements the SortedMap interface and relies on a Red-Black Tree structure. Instead of organizing keys by hash codes, keys are compared against one another and sorted dynamically in natural alphabetical/numerical order, or via a custom Comparator. Key lookups, insertions, and deletions run in $O(\log n)$ time.
+            E.g: Generating an alphabetical dictionary directory or a chronological calendar timeline map where keys are timestamps.
+        LinkedHashMap:
+            Property: Maintains insertion order of keys.
+            When: Implementing a fixed-capacity LRU (Least Recently Used) Cache for database queries.
+            Why: It is a direct subclass of HashMap, meaning it retains the high-speed hashing structure. However, it introduces a doubly-linked list running through all of its key-value pairs. This dual-architecture setup tracks the insertion order of your keys. It takes slightly more memory than a standard HashMap to store the pointer nodes but preserves predictable iteration order.
+            E.g: LRU for tabs of VScode or Antigravity
 
 ======================================================
 
