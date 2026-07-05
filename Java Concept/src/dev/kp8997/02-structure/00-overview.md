@@ -17,10 +17,16 @@
     Queue/Deque:
         LinkedList: The same as above, they also implements Deque interface
         ArrayDeque:
-            Property:
-            When:
+            Property: Stack, you need a pure FIFO queue or a LIFO (Last-In, First-Out) stack.
+            When: Managing an asynchronous message buffer or task pipeline where requests must be processed in the exact order they hit the server.
             Why:
             E.g:
+        PriorityQueue:
+            Property:
+            When
+            Why
+            E.g:
+
 
     Set: Sets focus strictly on uniqueness. They prohibit duplicate elements. If you try to add an existing element, the operation returns false.
         HashSet: Backed by a hash table; offers no order guarantees.
@@ -98,8 +104,13 @@
 ***Advance Insight Question***
 
 What case and why we need:
+
     sorted order:
+
     faster lookup:
+
     insertion order:
+
     FIFO and LIFO:
+
     
