@@ -1,19 +1,19 @@
 ======================================================
 
 # Object-Oriented Programming (OOP)
-Class
+Class: Blueprint
 
 Object
-    
     Serialization
 
+    
 Encapsulation
 
-Inheritance
+Inheritance: (Hierarchical Reusability)
 
-Polymorphism
+Polymorphism: (Context-Driven Behavior)
 
-Abstraction
+Abstraction: (Complexity Hiding)
 
 ======================================================
 # Remarkable question
