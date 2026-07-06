@@ -6,11 +6,18 @@
     default - non-pecified, classes in a same package can access
     public: every classes can access
 
-3. constructor
-    Without specific constructor declaration, a default constructor will be created automatically
-    With declaration:
-        super(params)
-        this(params)
+3. constructor: 
+    Architecture:
+        Never return even void
+        Have the same name as class itself
+        Can have access modifier
+    Behavior:
+        Call:
+            Implicit and Explicit: When call with new (explicit) the constructor will be invoked (implicit)
+        Not inherited: subclass has their own constructor, if want, can call super() for parent's constructor
+        Chain capability:
+            Can call other constructor with super(params) or this(params) only
+            If defined, must be in the first line
 
 4. static, instance and reference
     fields:
@@ -21,15 +28,6 @@
         static method can invoke only static methods
     
 
-5. inheritance
-    base on parent modifiers, subclass can inherit methods and fields
-    
+5. overloading
 
-6. polymorphism
-    override
-    
-7. interface
-
-8. Encapsulation
-
-9. Abstraction
+6. override
