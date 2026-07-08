@@ -13,3 +13,5 @@ inheritance: subclass
     private
 
 final can prevent the inheritance
+
+super and this can not be called in the same constructor
