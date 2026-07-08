@@ -11,3 +11,5 @@ inheritance: subclass
     default
     protect
     private
+
+final can prevent the inheritance
