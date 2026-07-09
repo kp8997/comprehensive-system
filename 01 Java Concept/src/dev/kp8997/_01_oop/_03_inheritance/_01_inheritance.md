@@ -22,3 +22,9 @@ subclass
         => in subclass we must call super(arguments) constructor explicitly, otherwise, it will show a compile time error
 
 7. Every class inherits from Object class
+
+8. @Override has 3 rules
+    implement different behavior from parent
+    call the same as parent method (explicitly calling super.method() in this case but redundant)
+    combine both ways above
+    

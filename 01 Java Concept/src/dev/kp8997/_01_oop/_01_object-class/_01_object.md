@@ -27,7 +27,3 @@
         instance method can invoke instance and static methods
         static method can invoke only static methods
     
-
-5. overloading
-
-6. override
