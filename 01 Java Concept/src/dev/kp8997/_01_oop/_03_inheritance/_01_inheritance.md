@@ -28,3 +28,14 @@ subclass
     call the same as parent method (explicitly calling super.method() in this case but redundant)
     combine both ways above
     
+===============
+
+# Summary
+
+Inheritance is about
+    modifier
+    super and this keyword and some rule about how to use it or impliciy/explicit call
+    override, overload, hide (for static)
+    method binding (static vs dynamic) ReferenceType (compile understood type)= Object type (In-memory type)
+    
+    
