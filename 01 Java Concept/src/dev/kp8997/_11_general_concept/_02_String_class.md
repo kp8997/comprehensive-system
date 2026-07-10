@@ -10,6 +10,38 @@ comparison
         Null Safety: Not safe. If the calling string is null, it throws a NullPointerException.
         
     String ==
+        compare only reference type (memory address)
+
+main methods
+    inspection
+        length
+        charAt
+        indexOf
+        lastIndexOf
+        isEmpty
+        isBlank
+    comparing
+        startWith
+        endWith
+        regionMatches
+        contains
+    String manipulation
+        clean up
+            trim
+            toLowerCase
+            toUpperCase
+            strip
+        manipulate
+            substring
+            slice
+            repeat
+            replace
+            join
+            concat
+            split
+            format
+            codePointAt, codePointBefore, codePointCount
+
 
 String pool
 
