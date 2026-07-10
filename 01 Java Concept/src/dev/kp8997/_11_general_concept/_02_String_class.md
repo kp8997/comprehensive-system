@@ -13,38 +13,27 @@ comparison
         compare only reference type (memory address)
 
 main methods
-    inspection
-        length
-        charAt
-        indexOf
-        lastIndexOf
-        isEmpty
-        isBlank
-    comparing
-        startWith
-        endWith
-        regionMatches
-        contains
+    inspection: length, charAt, indexOf, lastIndexOf, isEmpty, isBlank
+    comparing: startWith, endWith, regionMatches, contains
     String manipulation
-        clean up
-            trim
-            toLowerCase
-            toUpperCase
-            strip
-        manipulate
-            substring
-            slice
-            repeat
-            replace
-            join
-            concat
-            split
-            format
-            codePointAt, codePointBefore, codePointCount
+        clean up: trim, toLowerCase, toUpperCase, strip
+        manipulate: substring, slice, repeat, replace, join, concat, split, format, codePointAt, codePointBefore
 
+
+StringBuilder
 
 String pool
 
 String with new keyword
 
 String.format(%d %f %s %t %n)
+
+=========================
+
+# Summary
+
+We have major concept to remember:
+    String methods
+    String comparison
+    StringBuilder
+    String.format()
