@@ -29,6 +29,7 @@ StringBuilder and String
             create a new ephemeral buffer in memory
             copy old string and new string to concat into this temporary buffer
             create a new final byte[] buffer to hold new value then call the String constructor to save it to variable
+            finally, collect garbage.
 
     StringBuilder is mutable, so it's faster. It use single memory block to store the string and will only reallocate when the memory is full.
         Use in:
@@ -56,5 +57,5 @@ String.format(%d %f %s %t %n)
 We have major concept to remember:
     String methods
     String comparison
-    StringBuilder
+    StringBuilder and String mechanism
     String.format()
