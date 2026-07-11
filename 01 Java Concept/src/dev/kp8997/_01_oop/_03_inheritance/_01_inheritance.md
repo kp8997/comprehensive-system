@@ -15,7 +15,7 @@ subclass
 
 4. One child only extends one parent
 
-5. is a and has a relationship
+5. is a and has a relationship = composition
 
 6. if we don't have any constructor in parent class, the compiler will create a default constructor
     If we have constructor with arguments in parent class, the compiler will NOT create a default constructor
@@ -33,7 +33,7 @@ subclass
 # Summary
 
 Inheritance is about
-    modifier
+    modifier => encapsulation
     super and this keyword and some rule about how to use it or impliciy/explicit call
     override, overload, hide (for static)
     method binding (static vs dynamic) ReferenceType (compile understood type)= Object type (In-memory type)
