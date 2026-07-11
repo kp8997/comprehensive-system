@@ -15,6 +15,9 @@ Why:
     2. allowing direct access means when change internal implementation, it require changing all the calling code as well.
     3. if the direct access is used to initialize data for fields without constructor, we can miss initializing the data in some fields.
 
+Solution with Encapsulation:
+    1. Use private fields or modifiers to hide data, or wrap method with composition on needed fields
+    2. Use constructor to initialize data
 
 =============
 
