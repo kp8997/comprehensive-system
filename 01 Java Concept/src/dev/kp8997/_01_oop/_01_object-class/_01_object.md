@@ -26,4 +26,14 @@
     methods:
         instance method can invoke instance and static methods
         static method can invoke only static methods
-    
+
+
+==============================
+
+# Advance
+
+5. instance and static initializer
+
+==============================
+
+# Summary
