@@ -71,4 +71,3 @@
 5. modifier and exception type must be narrower on subclass
     protected -> protected or public
     default -> default, protected or public
-    
