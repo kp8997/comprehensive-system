@@ -9,14 +9,13 @@
             subclass can also write new overload methods
         
     override: same methods but different class
-        instance methods: 
+        instance methods:
             implement different behavior from parent
             call the same as parent method (explicitly calling super.method() in this case but redundant)
             combine both ways above
         static methods
             subclass cannot override static method
             subclass can define a new static method with same name (this is called hide method)
-    
 
 3.  private method will not be inherited, so it cannot be overriden
     final method cannot be overriden
@@ -42,6 +41,16 @@
     Abstract Classes: Used when classes share a tight identity and common implementation details.
     Interfaces: Used to establish a contract of behavior across completely unrelated classes. An interface is a pure polymorphic contract.
 
+5.  var keyword help to simplify the code with the right reference type at compile-time
+    can not be used in fields in class
+    can not be used in methods/function or paremeter of it
+    can not be used without assignment
+    can not be null 
+    e.g:
+        Vehicle v = new Car(); // polymorphism
+        var v = new Car(); // not polymorphism
+
+        
 Check more advance of _04_inheritance to gain knowledge
 
 =====================
