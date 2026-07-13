@@ -63,5 +63,5 @@ Create new classes for each real-world object that you observed at the beginning
 For each new class that you've created above, create an interface that defines its behavior, then require your class to implement it. Omit one or two methods and try compiling. What does the error look like?
 
 
-
 How to design a feature base on OOP classes and interfaces
+    => prefer 'has a' to 'is a' for inheritance
