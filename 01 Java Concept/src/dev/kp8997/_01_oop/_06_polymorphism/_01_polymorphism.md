@@ -38,8 +38,11 @@
         if printHeader is an instance method:
         polymorphicRef.printHeader();  // will call printHeader() from FinancialReportGenerator at runtime
 
-=====================
+4.  Polymorphism is the engine that powers abstraction.
+    Abstract Classes: Used when classes share a tight identity and common implementation details.
+    Interfaces: Used to establish a contract of behavior across completely unrelated classes. An interface is a pure polymorphic contract.
 
+=====================
 
 | Capability / Behavior | Static Methods | Instance Methods |
 | -------- | -------- | -------- |
@@ -49,3 +52,9 @@
 | Polymorphism Support    | Does not support runtime polymorphism   | Fully supports runtime polymorphism   |
 
 =====================
+
+# Summary
+Polymorphism is about:
+    overloading and overriding methods
+    hiding static methods and fields, not inherited with private and final methods
+    use combination with abstract and interface.
