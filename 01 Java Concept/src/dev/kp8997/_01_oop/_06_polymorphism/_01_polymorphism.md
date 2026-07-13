@@ -42,6 +42,8 @@
     Abstract Classes: Used when classes share a tight identity and common implementation details.
     Interfaces: Used to establish a contract of behavior across completely unrelated classes. An interface is a pure polymorphic contract.
 
+Check more advance of _04_inheritance to gain knowledge
+
 =====================
 
 | Capability / Behavior | Static Methods | Instance Methods |
