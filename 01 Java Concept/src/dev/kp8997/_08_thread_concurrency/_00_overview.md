@@ -1,1 +1,9 @@
-1. volatile 
+volatile
+
+synchronized
+
+lock, transiant lock
+
+completablefuture
+
+native ?
