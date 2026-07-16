@@ -12,7 +12,8 @@
 2. Concurrency Hazards
     deadlock: block code A wait for key B, and block code B wait for key A
     race condition: two thread access the same variable (cache CPU L1, L2, L3, RAM resource), and the result is not expected
-    thread pinning: thread is pinned to a specific CPU core, no matter what happen to the CPU, the thread will always run on that core
+    memory visibility issue: a thread updates the value of a variable, but other threads do not see the updated value.
+    thread pinning (for project loom only): thread is pinned to a specific CPU core, no matter what happen to the CPU, the thread will always run on that core
 
 3. Orchestrators & How to Manage Them
     Low-Level Guardrails (Memory Barrier & Locks)
@@ -27,3 +28,6 @@
         Thread pool is a cache of threads, used to execute tasks
     Structured Concurrency:
         Treats multiple tasks running on different threads as a single unit of work. If one subtask fails, all other subtasks are automatically canceled, preventing thread leaks.
+
+=============================
+### The 4 Fatal Pitfalls of Monitor Locks
