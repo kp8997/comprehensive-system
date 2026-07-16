@@ -16,9 +16,13 @@
 
 3. Orchestrators & How to Manage Them
     Low-Level Guardrails (Memory Barrier & Locks)
-        volatile: force read/write to main memory, prevent thread caching data, prevent reorder instruction
-        synchronized: intrinsic lock (monitor) on an object, ensures mutual exclusion (only one thread executes at a time) and memory visibility
-        ReentrantLock: explicit lock offering more advanced features than synchronized, like fairness, trylock (non-blocking attempt), interruptible locking, and condition variables.
+        volatile: force read/write to main memory, prevent thread caching data, prevent reorder instruction. designed for Single-Writer, Multiple-Reader scenarios. Multiple write can cause
+        synchronized: Ensures that a block of code (not just a single variable) is executed by only one thread at a time.
+            intrinsic lock (monitor) on an object, ensures mutual exclusion (only one thread executes at a time) and memory visibility;
+                => Implicit lock/unlock
+            ReentrantLock: explicit lock offering more advanced features than synchronized, like fairness, trylock (non-blocking attempt), interruptible locking, and condition variables.
+                => Explicit lock/unlock (unlock must be in finally block)
+        atomic operation: use cpu hardware instruction to perform operation on a single variable. example: AtomicInteger, AtomicLong, AtomicReference
     High-Level Thread Pools (ExecutorService)
         Thread pool is a cache of threads, used to execute tasks
     Structured Concurrency:

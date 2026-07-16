@@ -25,3 +25,30 @@ The OS sees a single, continuously running platform thread (the "Carrier Thread"
 	3.	Heap Swap: The JVM simply copies the current call stack of Virtual Thread A onto the Heap, and copies the saved call stack of Virtual Thread B from the Heap back into the Carrier Thread's execution frame.
     
 	4.	Resume: The CPU carries on executing instructions.
+
+Stack vs Heap Memory
+
+    Heap: Physical RAM; Memory uses for storing objects. Global memory shared by all threads. Any object by `new` keyword allocates in heap.
+
+    Stack: CPU Registers + RAM; CPU uses temporary data, execution state: variables of method (in scope), method frame, stack trace, thread's context
+
+Volatile: designed for Single-Writer, Multiple-Reader scenarios.
+
+------------------------------------------
+Stack vs Heap for thread:
+
+Heap (size fixed for JVM):
+    Class metadata
+    Loaded classes
+    Static variables
+    Instance variables of all objects
+    Array elements
+    Method arguments (references)
+    Dynamically allocated objects
+
+Stack (size fixed per thread):
+    Local variables (value type primitives, object references)
+    Method arguments (values)
+    Method frame (return address, local variables, operand stack)
+    Execution context (program counter, register state)
+    
