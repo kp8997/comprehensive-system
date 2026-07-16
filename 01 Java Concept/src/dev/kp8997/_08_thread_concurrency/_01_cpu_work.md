@@ -51,4 +51,40 @@ Stack (size fixed per thread):
     Method arguments (values)
     Method frame (return address, local variables, operand stack)
     Execution context (program counter, register state)
-    
+
+------------------------------------------
+What is a Thread Pool?
+
+A Thread Pool is a managed collection of worker threads that sit ready to execute tasks submitted to a queue. Instead of the classic, expensive pattern of:
+
+Request $\longrightarrow$ Create Thread $\longrightarrow$ Execute $\longrightarrow$ Destroy Thread
+
+
+ [ EXECUTOR SERVICE ARCHITECTURE ]
+                  
+   Tasks Submitted
+   (Runnables/Callables)
+        │
+        ▼
+   ┌──────────────────────────────────────────────┐
+   │ TASK QUEUE (LinkedBlockingQueue)              │
+   │  [Task 4]  [Task 3]  [Task 2]  [Task 1]      │
+   └──────────────────────┬───────────────────────┘
+                          │ (Assigns task when thread is free)
+                          ▼
+   ┌──────────────────────────────────────────────┐
+   │ THREAD POOL                                  │
+   │  ┌──────────┐   ┌──────────┐   ┌──────────┐  │
+   │  │ Thread-1 │   │ Thread-2 │   │ Thread-3 │  │ (Reused continuously)
+   │  │  (Idle)  │   │  (Busy)  │   │  (Busy)  │  │
+   │  └──────────┘   └──────────┘   └──────────┘  │
+   └──────────────────────────────────────────────┘
+
+=============================
+### How to Choose the Right Strategy for Maximum Performance
+
+Thread is expensive because it has own stack (1MB) and it need to allocate RAM for stack, CPU cache...
+
+    Use thread for heavy computational tasks
+
+    Use thread pool for managing threads, to avoid overhead looping for every task requires thread

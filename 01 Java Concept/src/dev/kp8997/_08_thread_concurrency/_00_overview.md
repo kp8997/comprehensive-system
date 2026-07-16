@@ -100,13 +100,3 @@ The "Spurious Wakeup" and if Statement Trap
     
     Why it crashes your system: Operating systems can occasionally wake up a sleeping thread without any explicit notify() call being sent (called a Spurious Wakeup). If Thread A wakes up and the check was a simple if statement, it will bypass the check and attempt to process a job from an empty queue, crashing with a runtime exception.
     
-=============================
-### How to Choose the Right Strategy for Maximum Performance
-
-Thread is expensive because it has own stack (1MB) and it need to allocate RAM for stack, CPU cache...
-
-=> thread only for cpu work, not for io work
-
-
-
-Use thread for heavy computational tasks
