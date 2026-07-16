@@ -11,7 +11,6 @@ immediate operation
     limit
     skip
     
-
 terminal operation
     collect
     forEach
