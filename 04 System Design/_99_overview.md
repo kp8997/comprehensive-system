@@ -1,7 +1,17 @@
 
 1. Scaling Type: Horizon vs Vertical Scaling:
-    Horizon: increase horizontal scale (add more servers, nodes, more CPUs).
+    Horizon: increase horizontal scale (add more servers, nodes).
+        upside:
+            One down, other can take over to process upcoming requests.
+            No bound, can infinitely scale.
+        downside:
+            Configuration overhead.
+            Application must be stateless, and load balancer must be implemented.
     Vertical: upgrade capacity of server, database (RAM, CPU, Disk).
+        upside:
+            Just a few nodes to maintain.
+        downside:
+            There is a hard limit of hardware for vertical scaling. (Maximum Ram maybe e.g 1TB for a node).
 
 2. Separate Server for application and database. There are 4 reasons:
 
