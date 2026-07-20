@@ -32,3 +32,22 @@
     Security:
         We can separate into 2 nodes, while database server only allow port e.g via 5432 for data access only.
         This can reduce the potential of attack from application layer.
+
+3. Failover Strategies:
+
+    Cold Standby:
+        Backup server is powered off and has no current data.
+        Failover requires manual intervention to power on and restore data.
+        Slowest recovery time (hours to days).
+        Cheapest option.
+    
+    Warm Standby:
+        Backup server is powered on but data is not actively being used.
+        Data is periodically synchronized (e.g., daily).
+        Faster recovery than cold standby (minutes to hours).
+        Moderate cost.
+
+    Hot Standby:
+        Backup server is fully powered on and running, with near real-time data synchronization.
+        Minimal downtime (seconds to minutes).
+        Highest cost due to continuous resource usage.
