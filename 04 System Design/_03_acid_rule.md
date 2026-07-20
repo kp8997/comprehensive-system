@@ -32,6 +32,35 @@ To make this abstract concept easily scannable and memorable, let's break down t
     Mechanism: Even if the database server abruptly loses power or crashes one millisecond after a commit, the data will not be lost. Databases achieve this using a Write-Ahead Log (WAL), recording changes to disk before updating the actual database blocks.
     Manual Rule: System crashes must never cause data regression.
 
-CAP Theorem
+CAP Theorem: The idea of it is: we can only have 2 of them, but not 3
+
+    C: Consistency. It is different about the term in ACID, here is about write data and can read it back immediately. Not read the stale data
+    A: Availability. It is mean that the system is always available and can respond to requests
+    P: Partition tolerance. It is mean that the system can tolerate network partitions and still function properly
+
+***Note***
+
+Consistency in ACID and CAP is different:
+    In ACID, consistency is about the integrity of data structures and business rules, ensuring data remains valid before and after a transaction.
+    In CAP, consistency is about the integrity of data across the system, and that the data is available to all nodes in the system.
+
+  [A] Availability
+                     / \
+                    /   \
+                   /     \
+                  /  (AP) \
+                 /         \
+                /  Cassandra\
+               /             \
+              /               \
+   MySQL     /_________________\  (CP)  Apache HBase
+   PostgreSQL                           MongoDB
+     (CA)                               DynamoDB (Strongly Consistent)
+[C] Consistency                     [P] Partition-Tolerance
+
+*** In terms of design system ***
+
+CAP for macro level: system level - software architect choice
+ACID for micro level: transaction level - backend developer/data engineer choice. Decide what logic should be bounded in transaction to ensure the correctness of business data
 
     
