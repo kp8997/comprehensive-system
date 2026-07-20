@@ -1,4 +1,4 @@
-Sharding: 
+Sharding:
 
     What:
         A shard is just a horizontal partition of database (a horizontal node of db).
