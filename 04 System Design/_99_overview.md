@@ -40,14 +40,23 @@
         Failover requires manual intervention to power on and restore data.
         Slowest recovery time (hours to days).
         Cheapest option.
-    
+        Server is sitting in storage, no power on it, no replication.
+
     Warm Standby:
         Backup server is powered on but data is not actively being used.
-        Data is periodically synchronized (e.g., daily).
+        Data is periodically automatically synchronized (e.g., in a very small time latency).
         Faster recovery than cold standby (minutes to hours).
         Moderate cost.
+        Server is sitting there and replicate data from main node in a period of time. Can not query/read to it.
 
     Hot Standby:
-        Backup server is fully powered on and running, with near real-time data synchronization.
+        Backup server is fully powered on and running.
+        Near real-time data synchronization.
         Minimal downtime (seconds to minutes).
         Highest cost due to continuous resource usage.
+        Server is sitting there and replicate data from main node in real time. Can query/read to it.
+
+    Multi-Primary
+        Application can read/write to both of Primary nodes at the same time. No rely on replication mechanics.
+        Data is real time.
+        When a node died and restore back, we have to resync the data before putting it back in service.
