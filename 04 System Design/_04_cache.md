@@ -95,4 +95,3 @@ Some strategies between read and write
         Application writes to Cache
             Cache synchronously writes to database and return successful response for Application (Write-Through)
             Cache writes to database asynchronously via external middleware (message queue, or background process). (Write-Behind)
-    
