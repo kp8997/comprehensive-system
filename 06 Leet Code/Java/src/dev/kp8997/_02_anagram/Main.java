@@ -5,13 +5,33 @@ import java.util.Arrays;
 public class Main {
     static void main() {
         System.out.println(Solution.isAnagram3("anagram", "nagaram"));
+        System.out.println(Solution.isAnagram2("anagram", "nagaram"));
+
+        int [] count = new int[26];
+
+        count[5]++;
+        System.out.println(Arrays.toString(count));
     }
 }
 
 class Solution {
 
     public static boolean isAnagram2(String s, String t) {
-        return false;
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        int[] counts = new int [26];
+        for (int i = 0; i < s.length(); i++) {
+            counts[s.charAt(i) - 'a']++;
+            counts[t.charAt(i) - 'a']--;
+        }
+
+        for (int count : counts) {
+            if (count != 0) return false;
+        }
+
+        return true;
     }
 
     public static boolean isAnagram3(String s, String t) {
