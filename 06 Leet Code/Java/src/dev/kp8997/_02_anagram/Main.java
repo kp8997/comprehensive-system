@@ -1,11 +1,13 @@
 package dev.kp8997._02_anagram;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Main {
     static void main() {
         System.out.println(Solution.isAnagram3("anagram", "nagaram"));
-        System.out.println(Solution.isAnagram2("anagram", "nagaram"));
+        System.out.println(Solution.isAnagram2("anagramr", "nagarram"));
+        System.out.println(Solution.isAnagram1("anagram", "nagaram"));
 
         int [] count = new int[26];
 
@@ -16,7 +18,7 @@ public class Main {
 
 class Solution {
 
-    public static boolean isAnagram2(String s, String t) {
+    public static boolean isAnagram1(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
@@ -32,6 +34,32 @@ class Solution {
         }
 
         return true;
+    }
+
+    public static boolean isAnagram2(String s, String t) {
+
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        HashMap<Character, Integer> s1 = new HashMap<Character, Integer>();
+
+        for (char c : s.toCharArray()) {
+            s1.put(c, s1.getOrDefault(c, 0) + 1);
+        }
+
+        for (char c : t.toCharArray()) {
+            if (!s1.containsKey(c) || s1.get(c) == 0) return false;
+
+            int count = s1.get(c) - 1;
+            if (count == 0) {
+                s1.remove(c);
+            } else {
+                s1.put(c, count);
+            }
+        }
+
+        return s1.isEmpty();
     }
 
     public static boolean isAnagram3(String s, String t) {
