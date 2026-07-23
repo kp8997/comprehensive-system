@@ -18,6 +18,7 @@ public class Main {
 
 class Solution {
 
+    // Time is O(n), space is O(1)
     public static boolean isAnagram1(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -36,6 +37,7 @@ class Solution {
         return true;
     }
 
+    // Time is O(n), space is O(k), k is number of unique characters
     public static boolean isAnagram2(String s, String t) {
 
         if (s.length() != t.length()) {
@@ -62,6 +64,7 @@ class Solution {
         return s1.isEmpty();
     }
 
+    // Time is O(nlogn), space is n
     public static boolean isAnagram3(String s, String t) {
         char [] s1 = s.toCharArray();
         char [] s2 = t.toCharArray();

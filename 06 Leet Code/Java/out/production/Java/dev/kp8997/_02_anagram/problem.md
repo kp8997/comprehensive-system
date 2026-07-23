@@ -1,4 +1,4 @@
-242. Valid Anagram
+243. Valid Anagram
      Easy
      Topics
      premium lock icon
