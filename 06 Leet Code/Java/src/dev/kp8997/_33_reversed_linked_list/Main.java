@@ -16,6 +16,16 @@ class ListNode {
 
 class Solution {
     public ListNode reverseList(ListNode head) {
+        ListNode rv = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = rv;
+            rv = cur;
+            cur = next;
+        }
+
+        return rv;
 
     }
 }
