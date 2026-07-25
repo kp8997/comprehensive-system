@@ -36,13 +36,19 @@ class Solution {
         while (i < n) {
             // Find the delimiter index
             int delimiterIndex = s.indexOf('#', i);
+            System.out.println("delimiterIndex: " + delimiterIndex);
 
             // Extract and parse the length of the payload
             int length = Integer.parseInt(s.substring(i, delimiterIndex));
+            System.out.println("length: " + length);
 
             // Extract the actual string payload
             int start = delimiterIndex + 1;
             int end = start + length;
+
+            System.out.println("start: " + start);
+            System.out.println("end: " + end);
+
             result.add(s.substring(start, end));
 
             // Advance the index past the extracted payload segment
