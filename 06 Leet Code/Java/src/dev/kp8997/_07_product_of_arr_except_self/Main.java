@@ -7,11 +7,32 @@ public class Main {
         System.out.println(Arrays.toString(Solution.productExceptSelf3(new int[]{1, 2, 3, 4})));
         //System.out.println(Arrays.toString(Solution.productExceptSelf2(new int[]{-1, 1, 0, -3, 3})));
         System.out.println(Arrays.toString(Solution.productExceptSelf2(new int[]{1, 2, 3, 4})));
+        System.out.println(Arrays.toString(Solution.productExceptSelf(new int[]{-1, 1, 0, -3, 3})));
 
     }
 }
 
 class Solution {
+
+    public static int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] output = new int[n];
+
+        // Step 1: Compute prefix products directly into output array
+        output[0] = 1;
+        for (int i = 1; i < n; i++) {
+            output[i] = output[i - 1] * nums[i - 1];
+        }
+
+        // Step 2: Compute suffix products on the fly and combine
+        int suffixProduct = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            output[i] = output[i] * suffixProduct;
+            suffixProduct *= nums[i]; // Update running suffix product
+        }
+
+        return output;
+    }
 
     public static int[] productExceptSelf2(int[] nums) {
         int n = nums.length;
@@ -38,8 +59,6 @@ class Solution {
             System.out.println(Arrays.toString(result));
 
         }
-
-
 
         return result;
     }
