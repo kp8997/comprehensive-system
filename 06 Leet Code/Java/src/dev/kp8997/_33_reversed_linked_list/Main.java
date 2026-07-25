@@ -1,8 +1,7 @@
 package dev.kp8997._33_reversed_linked_list;
 
 public class Main {
-    static void main() {
-
+    static void main() {System.out.println(123);
     }
 }
 
@@ -24,8 +23,6 @@ class Solution {
             rv = cur;
             cur = next;
         }
-
         return rv;
-
     }
 }
