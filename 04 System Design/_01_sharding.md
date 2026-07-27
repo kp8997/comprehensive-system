@@ -9,6 +9,8 @@ Sharding:
         Hardware Limits (Vertical Scaling Wall): You can only add so much CPU, RAM, and NVMe storage to a single machine before it becomes economically or physically impossible to scale higher.
         Throughput Bottlenecks: A single server can only handle a finite number of concurrent Read/Write operations.
         Index Size Inflation: As tables grow to hundreds of millions of rows, their search indexes overflow the server's RAM, forcing slow disk I/O operations.
+    
+    Recommendation: Sharding should be deployed on many nodes that connect via network. Will have a proxy layer/ application to manage those.
 
 3 things to consider when comply database design:
     High availability
