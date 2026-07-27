@@ -23,7 +23,7 @@ Design example:
     In this architecture, we will have 3 components:
         - Mongos: contain router rule, it will route the query to the correct shard.
         - Config servers: store the metadata of the cluster, including the shard key and the range of values. It has replica it self to serve the fault tolerance for configuration.
-        - Replica sets (shards): store the data, each replica set is a subset of the data itself. Inside, a replica set has primary-secondary nodes to serve the redundancy for data. It's like replication but on a smaller scale. When a primary node is down, a secondary node will be elected as the new primary to serve the high availability.
+        - Replica sets (shards): store the data, each replica set is a subset of the data itself. Inside, a replica set has many nodes contain the duplication of data organized by primary-secondary nodes system to serve the redundancy for data. It's like replication but on a smaller scale. When a primary node is down, a secondary node will be elected as the new primary to serve the high availability.
 
     Cassandra: they use ring architecture system
         Every nodes connect to each other in a ring topology.
