@@ -47,3 +47,11 @@ Mechanism: master - slave
     Data Node (slave)
         Store blocks of data
         Manage storage, block operations, and block replication
+
+    Replication is rack-aware. Means that each block is replicated on different racks to prevent data loss. A rack has some data nodes. Rack-aware replication improves data reliability and fault tolerance by ensuring that if an entire rack fails, the data is still accessible from other racks.
+    
+    Example:
+        Rack 1: [DN1, DN2]
+        Rack 2: [DN3, DN4]
+        Rack 3: [DN5, DN6]
+        Block A replication: [DN1, DN3, DN5] (each block in different racks)
