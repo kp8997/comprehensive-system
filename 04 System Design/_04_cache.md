@@ -13,6 +13,20 @@ In this diagram, the green directional arrows show the exact flow of network com
 
 	5. Database (DB) -> Persists master data and returns results up through the cache layer to the requesting application server.
 
+Some Problems
+
+    Hotspot (celebrity) - some cache works too much compare to others
+
+    Cold-start: cache miss on first request. Need a lot of requests to warm up cache.
+        Actual problem: There will be a massive of requests send to cache to load for the same or different keys:
+            This would crash cache layer in some cache if too many requests.
+            If cache miss they will relay (from application or cache depends on the pattern) to database to fetch data. A massive requests hit database at the same time for read can make database crash.
+
+        Solutions: we should manually populate it before open it back to live
+            1.  pre-load batch by a job to initialize the cache
+            2.  have 2 cache instance and write to them dual, when one crash, read the other and still write both
+            3.  Snapshot persistence mechanism of the cache itself (Redis snapshot or AOF logs)
+
 3 Patterns
 
     1. Cache-Aside (Lazy loading)
@@ -95,3 +109,23 @@ Some strategies between read and write
         Application writes to Cache
             Cache synchronously writes to database and return successful response for Application (Write-Through)
             Cache writes to database asynchronously via external middleware (message queue, or background process). (Write-Behind)
+
+
+--------------------------------------
+
+## How do we know it is the right time to implement cache for our small scale application?
+
+
+We should implement a caching layer as soon as your monitoring tools (e.g., Prometheus, Grafana, Datadog) hit any one of these specific operational thresholds:
+
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                              CACHE IMPLEMENTATION TRIGGERS                             │
+├──────────────────────────────┬─────────────────────────────────┬───────────────────────┤
+│ Metric Category              │ Healthy Range (No Cache Needed) │ Cache Required        │
+├──────────────────────────────┼─────────────────────────────────┼───────────────────────┤
+│ 1. Average DB Query Latency  │ < 20ms - 50ms                   │ > 100ms - 200ms       │
+│ 2. DB CPU Utilization        │ Consistent < 50% - 60%          │ Sustained > 70% - 80% │
+│ 3. Read-to-Write Ratio       │ Near 1:1 or Write-Heavy         │ > 80% Reads (4:1)     │
+│ 4. Connection Pool Usage     │ < 40% Capacity                  │ Sustained > 80%       │
+│ 5. Duplicate Query Rate      │ Low (< 10%)                     │ > 30% Identical SQL   │
+└──────────────────────────────┴─────────────────────────────────┴───────────────────────┘
