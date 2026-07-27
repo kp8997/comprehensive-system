@@ -39,12 +39,12 @@ Traditional:
 Mechanism: master - slave pattern
     Data storage: Data is split into blocks (default 64MB) and replicated across multiple slave nodes. The master node keeps track of which blocks are stored on which slave nodes.
     
-    Name Node (master): There may have more than one node, usually are 3 to hold the metadata
-        Metadata (file names, permissions, and mappings of file blocks to DataNodes). 
+    Name Node (master role): There may have more than one node, usually are 3 to hold the metadata
+        Metadata (file names, permissions, and mappings of file blocks to DataNodes).
         Think of it like a indexes of file blocks (similar to DB indexes)
         Handle client requests for file operations (read, write, delete)
         
-    Data Node (slave)
+    Data Node (slave role)
         Store blocks of data
         Manage storage, block operations, and block replication
 
