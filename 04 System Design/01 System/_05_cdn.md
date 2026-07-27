@@ -11,8 +11,6 @@ Resilience solution when server is physically crash (network down, server off, c
     1. Distribute all over the world. Just change DNS to nearest alive zone
     2. Implement a redundancy capability for servers to handle those cases if happen
         Should consider the cost and demand. Does that meet our requirement
-    
-    
 
 ---------------------------------------
 
@@ -38,7 +36,6 @@ Traditional:
     Network bandwidth becomes the primary bottleneck. Transferring petabytes of data over cables causes massive latency and network congestion.
     => Hadoop inverted this pattern. Instead of moving data to the code, Hadoop moves the code (MapReduce job) to the node where the data already lives.
 
-
 Mechanism: master - slave
     Data storage: Data is split into blocks (default 64MB) and replicated across multiple slave nodes. The master node keeps track of which blocks are stored on which slave nodes.
     
@@ -50,4 +47,3 @@ Mechanism: master - slave
     Data Node (slave)
         Store blocks of data
         Manage storage, block operations, and block replication
-        
