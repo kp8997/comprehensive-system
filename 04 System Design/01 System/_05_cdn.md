@@ -36,7 +36,7 @@ Traditional:
     Network bandwidth becomes the primary bottleneck. Transferring petabytes of data over cables causes massive latency and network congestion.
     => Hadoop inverted this pattern. Instead of moving data to the code, Hadoop moves the code (MapReduce job) to the node where the data already lives.
 
-Mechanism: master - slave
+Mechanism: master - slave pattern
     Data storage: Data is split into blocks (default 64MB) and replicated across multiple slave nodes. The master node keeps track of which blocks are stored on which slave nodes.
     
     Name Node (master): There may have more than one node, usually are 3 to hold the metadata
