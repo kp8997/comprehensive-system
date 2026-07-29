@@ -57,8 +57,8 @@ class Solution {
 
     private int calculateHeight(TreeNode root) {
         if (root != null) {
-            int leftDepth = diameterOfBinaryTree(root.left);
-            int rightDepth = diameterOfBinaryTree(root.right);
+            int leftDepth = calculateHeight(root.left);
+            int rightDepth = calculateHeight(root.right);
             int currentDia = leftDepth + rightDepth;
             maxDiameter = Math.max(maxDiameter, currentDia);
             return Math.max(leftDepth, rightDepth) + 1;
