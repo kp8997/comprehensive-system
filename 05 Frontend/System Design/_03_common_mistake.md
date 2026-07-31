@@ -5,6 +5,7 @@
     You should have a systematic thinking framework to follow when answering system design questions.
 
 3. **Insisting on only one solution or the best solution**
+    Don't insist there's only one solution, especially if the interviewer prompts you for alternative approaches. More often than not, there are multiple ways to solve a problem, each with its own tradeoffs.
 
 4. **Remaining silent the entire time**
     On the opposite of the spectrum of answering too quickly, there are people who remain too silent. Think out loud
