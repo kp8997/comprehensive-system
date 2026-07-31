@@ -39,8 +39,8 @@ Consider those essential points for this section
         High complexity: model, dropdown, date-time picker
 
     To have a solid design, consider those criteria:
-        1. irst is internal state and API between components: (parent -> children, among children)
-        2. then dive into optimization, performance, accessibility, UX, security, etc, where relevant.
+        1. First is internal state and API between components: (parent -> children, among children)
+        2. Then dive into optimization, performance, accessibility, UX, security, etc, where relevant.
 
     Might have requirement to write a small amout of code of the following purpose:
         1. Describe the component hierarchy
