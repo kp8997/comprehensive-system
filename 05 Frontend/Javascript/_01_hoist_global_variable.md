@@ -5,3 +5,4 @@ variable, function and class always be hoisted in to the top of block or global 
 But it also affects the variable so it has some behavior with scope
     block scope: let, const can not be initialized before its declaration - TDZ (Temporal Dead Zone)
         
+var in global can automatically belong to window object
