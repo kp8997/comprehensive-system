@@ -23,3 +23,5 @@
     This is Zalgo - when you mix synchronous code with asynchronous code in the same callback
 
     By wrapping the error callback in process.nextTick(), foo guarantees that any code written synchronously after foo(...) will finish executing before the callback is ever invoked
+
+2. 
