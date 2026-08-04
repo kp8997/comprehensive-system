@@ -130,6 +130,23 @@ output:
 5
 ```
 
+---------------
+
+```
+function func() {
+    var a = 'Hello';
+    let b = 'Roadside coder';
+
+    if (true) {
+        let a = 'Hi'; // Legal Shadowing
+        var b = 'Bye'; // Illegal Shadowing
+        console.log(a); 1.Hi ✅
+        console.log(b); 2. SyntaxError: Identifier 'b' has already been declared ❌
+    }
+}
+func();
+```
+
 ==============================
 To summarize
 
@@ -145,4 +162,11 @@ scope
         exit function, variable will be clear out
         if modify outer value within a function scope, it will return new value to outer scope
         if declare a var in the function same name as outer variable, it will create new variable, exit will clear out scope value
-    
+
+redeclaration within scope:
+    var: okay
+    let, const: error
+
+shadow:
+    we can shadow var using let
+    we can't shadow let using var (because redeclare a let variable can not be allowed within same block scope)
