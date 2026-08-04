@@ -88,6 +88,48 @@ output:
 6
 ```
 
+```
+var i = 10;
+function test() {
+    for (var i = 0; i < 5; i++) {
+        console.log(i);
+    }
+}
+console.log(i);
+test();
+console.log(i);
+
+output:
+10
+0
+1
+2
+3
+4
+10
+```
+
+```
+var i = 10;
+function test() {
+    for (i = 0; i < 5; i++) {
+        console.log(i);
+    }
+}
+console.log(i);
+test();
+console.log(i);
+
+output:
+10
+0
+1
+2
+3
+4
+5
+```
+
 ==============================
 To summarize
 
