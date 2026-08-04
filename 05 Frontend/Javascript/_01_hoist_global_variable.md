@@ -1,14 +1,14 @@
 Scope of variable
     Global
     Parameter: sit between Global and BLock when have default assignment for parameter
-    Function/Block: inside the block scope
+    Function/Block: inside the block scope. function scope for var, block scope for let and const (block scope ignored by var)
 
 Phase of variable
     Declaration
     Initialization
     Assignment
 
-    Hoist: When hoist a:
+    Hoist: When hoist a variable has a kind of:
         let and const: only declaration is hoisted
             => access before using will throw ReferenceError in TDZ (Temporal Dead Zone)
         var: declaration and initialization (default is undefined) are hoisted
@@ -49,3 +49,58 @@ output
 6
 
 ```
+
+-----------
+If it is function and declare with var, when exit function all the variable in there will be clear out
+
+```
+var z = 7;
+function test() {
+    console.log(z);
+    var z = 6;
+    console.log(z);
+}
+console.log(z);
+test();
+
+output:
+7
+undefined
+6
+
+```
+-----------
+If it is function and reuse the outer scope variable, when exit function outside variable receive new value
+
+```
+var a = 7;
+function test() {
+    console.log(a);
+    a = 6;
+    console.log(a);
+}
+console.log(a);
+test();
+
+output:
+7
+7
+6
+```
+
+==============================
+To summarize
+
+hoist:
+    let and const is only declaration are hoisted
+    var is both declaration and initialization are hoisted. Default value is undefined
+
+scope
+    let and const: block scope
+        exit block/function, variable will be clear out
+
+    var: function scope. var ignore block scope
+        exit function, variable will be clear out
+        if modify outer value within a function scope, it will return new value to outer scope
+        if declare a var in the function same name as outer variable, it will create new variable, exit will clear out scope value
+    
