@@ -18,11 +18,11 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
     throw TypeError("type must be array");
   }
 
-  if (arr.length === 0 && 
-  (initialValue === null || initialValue === undefined)) {
+  if (arr.length === 0 &&
+    (initialValue === null || initialValue === undefined)) {
     throw TypeError("must provide array or initialValue");
   }
-  
+
   if (
     arr.length === 1 &&
     (initialValue === null || initialValue === undefined)
@@ -45,7 +45,7 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
   // } 
 
   if (arguments.length >= 2) {
-      accumulator = initialValue;
+    accumulator = initialValue;
   }
   else {
     accumulator = arr[0];
