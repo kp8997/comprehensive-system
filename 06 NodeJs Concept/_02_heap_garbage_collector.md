@@ -13,6 +13,10 @@ Heap Architecture
   3. Specialized Spaces: big object that exceed the allocation in Young Generation
 
 Garbage Collector
-  1. Scavenger (mini GC): for Young Generation (1-100 ms)
-  3. Mark Sweep Compact (major GC): for Old Generation (10-1000 ms)
+  1. Scavenger (mini GC): for Young Generation
+  2. Mark Sweep Compact (major GC): for Old Generation: 3 phases
+    Marking: identify reachable object base on root references, using with tri-color scheme White, Gray, Black
+    Sweeping: traverses unreachable (White) object and register the pointer of them into free list for future allocations
+    Compacting: compact the memory by moving reachable objects closer together to reduce fragmentation
+
   
