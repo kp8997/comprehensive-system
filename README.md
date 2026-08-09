@@ -1,5 +1,7 @@
 This was my knowledge area in practice and study, contain from simple to complex concept of many programming as well as framework and system mechanism (design system, design pattern)
 
+Think of this as my learning journey, they will be more folder as well as topic I will discover and note down for next reference. Will be more kind of variety of data in this journey to make this repo vivid and comprehensive.
+
 ## Programming Language
     - Java
     - Java spring boot
