@@ -18,6 +18,22 @@ const defaultTasks = [
   { id: 3, name: "Wash the dishes" },
 ];
 
+
+function myDebounce (callback, wait) {
+  let timer = null;
+  
+  return function (...arg) {
+    clearTimeout(timer)
+
+    const context = this;
+
+    timer = setTimeout(() => {
+      timer = null; // ensure timer reset
+      callback.apply(context, arg)
+    }, wait)
+  }
+}
+
 export default function App() {
   const [tasks, setTasks] = useState(defaultTasks);
   const [currentInput, setCurrentInput] = useState("");
@@ -38,6 +54,8 @@ export default function App() {
     setTasks(prev => [...prev, {id: tasks.length + 1, name: currentInput}]);
   };
 
+  const debounceAdd = myDebounce(handleAdd, 800);
+
   return (
     <div>
       <h1>Todo List</h1>
@@ -49,7 +67,7 @@ export default function App() {
           placeholder="Add your task"
         />
         <div>
-          <button onClick={handleAdd}>Submit</button>
+          <button onClick={debounceAdd}>Submit</button>
         </div>
       </div>
       <ul>
