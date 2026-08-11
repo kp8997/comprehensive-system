@@ -169,4 +169,4 @@ redeclaration within scope:
 
 shadow:
     we can shadow var using let
-    we can't shadow let using var (because redeclare a let variable can not be allowed within same block scope)
+    we can't shadow let using var (because redeclare a let variable can not be allowed within same block scope).
