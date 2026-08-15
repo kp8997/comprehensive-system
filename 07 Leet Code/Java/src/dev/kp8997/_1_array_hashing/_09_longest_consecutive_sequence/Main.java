@@ -1,6 +1,5 @@
-package dev.kp8997._09_longest_consecutive_sequence;
+package dev.kp8997._1_array_hashing._09_longest_consecutive_sequence;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

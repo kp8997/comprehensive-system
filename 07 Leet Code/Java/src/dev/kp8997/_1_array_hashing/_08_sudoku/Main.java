@@ -1,7 +1,4 @@
-package dev.kp8997._08_sudoku;
-
-import java.util.HashSet;
-import java.util.Set;
+package dev.kp8997._1_array_hashing._08_sudoku;
 
 public class Main {
     static void main() {

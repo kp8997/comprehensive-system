@@ -1,4 +1,4 @@
-package dev.kp8997._07_product_of_arr_except_self;
+package dev.kp8997._1_array_hashing._07_product_of_arr_except_self;
 
 import java.util.Arrays;
 
