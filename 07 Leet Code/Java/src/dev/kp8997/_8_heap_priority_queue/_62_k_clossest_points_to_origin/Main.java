@@ -1,4 +1,4 @@
-package dev.kp8997._62_k_clossest_points_to_origin;
+package dev.kp8997._8_heap_priority_queue._62_k_clossest_points_to_origin;
 
 import java.util.*;
 

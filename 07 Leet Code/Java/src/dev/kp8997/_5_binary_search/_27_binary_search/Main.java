@@ -1,4 +1,4 @@
-package dev.kp8997._27_binary_search;
+package dev.kp8997._5_binary_search._27_binary_search;
 
 public class Main {
     static void main() {

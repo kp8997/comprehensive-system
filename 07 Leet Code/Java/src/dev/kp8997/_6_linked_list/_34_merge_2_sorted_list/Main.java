@@ -1,4 +1,4 @@
-package dev.kp8997._34_merge_2_sorted_list;
+package dev.kp8997._6_linked_list._34_merge_2_sorted_list;
 
 
 public class Main {

@@ -1,4 +1,4 @@
-package dev.kp8997._61_last_stone_weight;
+package dev.kp8997._8_heap_priority_queue._61_last_stone_weight;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

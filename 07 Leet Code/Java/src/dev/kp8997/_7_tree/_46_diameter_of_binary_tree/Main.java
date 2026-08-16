@@ -1,4 +1,4 @@
-package dev.kp8997._37_diameter_of_binary_tree;
+package dev.kp8997._7_tree._46_diameter_of_binary_tree;
 
 public class Main {
     static void main() {

@@ -1,9 +1,9 @@
-package dev.kp8997._35_invert_binary_tree;
+package dev.kp8997._7_tree._45_maximum_depth_of_binary_tree;
 
 public class Main {
     static void main() {
-        //Input: root = [4,2,7,1,3,6,9]
-        //Output: [4,7,2,9,6,3,1]
+        // Input: root = [3,9,20,null,null,15,7]
+        // Output: 3
     }
 }
 
@@ -38,17 +38,14 @@ class TreeNode {
 
 
 class Solution {
-    public static TreeNode invertTree(TreeNode root) {
-        if (root == null) {
-            return null;
+    public static int maxDepth(TreeNode root) {
+        int depth = 0;
+        if (root != null) {
+            int leftDepth = maxDepth(root.left);
+            int rightDepth = maxDepth(root.right);
+            depth = Math.max(leftDepth, rightDepth);
+            depth++;
         }
-
-        TreeNode temp = root.left;
-        root.left = root.right;
-        root.right = temp;
-        invertTree(root.left);
-        invertTree(root.right);
-
-        return root;
+        return depth;
     }
 }

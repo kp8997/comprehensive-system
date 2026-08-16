@@ -1,4 +1,4 @@
-package dev.kp8997._22_min_stack;
+package dev.kp8997._4_stack._22_min_stack;
 
 import java.util.*;
 

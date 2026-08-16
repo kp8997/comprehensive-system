@@ -1,4 +1,4 @@
-package dev.kp8997._21_valid_parentheses;
+package dev.kp8997._4_stack._21_valid_parentheses;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
