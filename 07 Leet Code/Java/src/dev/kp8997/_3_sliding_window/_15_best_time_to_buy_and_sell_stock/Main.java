@@ -1,4 +1,4 @@
-package dev.kp8997._15_best_time_to_buy_and_sell_stock;
+package dev.kp8997._3_sliding_window._15_best_time_to_buy_and_sell_stock;
 
 public class Main {
     static void main() {

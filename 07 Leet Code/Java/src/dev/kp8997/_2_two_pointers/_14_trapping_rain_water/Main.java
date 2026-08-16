@@ -1,4 +1,4 @@
-package dev.kp8997._14_trapping_rain_water;
+package dev.kp8997._2_two_pointers._14_trapping_rain_water;
 
 public class Main {
     static void main() {

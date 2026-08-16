@@ -1,4 +1,4 @@
-package dev.kp8997._13_container_with_most_water;
+package dev.kp8997._2_two_pointers._13_container_with_most_water;
 
 public class Main {
     static void main() {

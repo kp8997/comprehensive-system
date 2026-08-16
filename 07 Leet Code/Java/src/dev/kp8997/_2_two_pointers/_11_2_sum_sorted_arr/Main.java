@@ -1,4 +1,4 @@
-package dev.kp8997._11_2_sum_sorted_arr;
+package dev.kp8997._2_two_pointers._11_2_sum_sorted_arr;
 
 import java.util.Arrays;
 
