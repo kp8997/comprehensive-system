@@ -1,4 +1,4 @@
-package dev.kp8997._6_linked_list._34_reversed_linked_list;
+package dev.kp8997._06_linked_list._34_reversed_linked_list;
 
 public class Main {
     static void main() {System.out.println(123);

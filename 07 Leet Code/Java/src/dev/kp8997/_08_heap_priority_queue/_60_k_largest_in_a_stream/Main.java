@@ -1,4 +1,4 @@
-package dev.kp8997._8_heap_priority_queue._60_k_largest_in_a_stream;
+package dev.kp8997._08_heap_priority_queue._60_k_largest_in_a_stream;
 
 import java.util.PriorityQueue;
 

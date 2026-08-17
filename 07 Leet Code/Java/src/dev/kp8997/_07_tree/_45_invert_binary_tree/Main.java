@@ -1,4 +1,4 @@
-package dev.kp8997._7_tree._45_invert_binary_tree;
+package dev.kp8997._07_tree._45_invert_binary_tree;
 
 public class Main {
     static void main() {
