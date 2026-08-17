@@ -1,4 +1,4 @@
-package dev.kp8997._1_array_hashing._08_sudoku;
+package dev.kp8997._01_array_hashing._08_sudoku;
 
 public class Main {
     static void main() {

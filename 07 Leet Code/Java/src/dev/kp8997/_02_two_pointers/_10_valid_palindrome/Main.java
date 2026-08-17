@@ -1,4 +1,4 @@
-package dev.kp8997._2_two_pointers._10_valid_palindrome;
+package dev.kp8997._02_two_pointers._10_valid_palindrome;
 
 public class Main {
 

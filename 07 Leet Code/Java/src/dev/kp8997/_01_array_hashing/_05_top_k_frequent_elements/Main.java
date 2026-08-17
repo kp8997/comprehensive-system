@@ -1,4 +1,4 @@
-package dev.kp8997._1_array_hashing._05_top_k_frequent_elements;
+package dev.kp8997._01_array_hashing._05_top_k_frequent_elements;
 
 import java.util.*;
 

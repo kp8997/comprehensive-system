@@ -1,4 +1,4 @@
-package dev.kp8997._2_two_pointers._12_3_sum;
+package dev.kp8997._02_two_pointers._12_3_sum;
 
 import java.util.*;
 

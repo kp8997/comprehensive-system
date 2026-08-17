@@ -1,4 +1,4 @@
-package dev.kp8997._1_array_hashing._03_two_sum;
+package dev.kp8997._01_array_hashing._03_two_sum;
 
 import java.util.Arrays;
 import java.util.HashMap;

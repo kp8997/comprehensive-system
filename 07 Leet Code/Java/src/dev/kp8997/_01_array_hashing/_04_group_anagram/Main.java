@@ -1,4 +1,4 @@
-package dev.kp8997._1_array_hashing._04_group_anagram;
+package dev.kp8997._01_array_hashing._04_group_anagram;
 
 import java.util.*;
 
