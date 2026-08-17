@@ -67,3 +67,20 @@ class Solution {
         return 0;
     }
 }
+
+class Node {
+    public int val;
+    public java.util.List<Node> neighbors;
+    public Node() {
+        val = 0;
+        neighbors = new java.util.ArrayList<Node>();
+    }
+    public Node(int _val) {
+        val = _val;
+        neighbors = new java.util.ArrayList<Node>();
+    }
+    public Node(int _val, java.util.ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+}
