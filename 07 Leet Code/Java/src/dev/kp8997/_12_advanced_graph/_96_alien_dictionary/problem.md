@@ -1,1 +1,3 @@
-# _96_alien_dictionary
+# Alien Dictionary
+
+Premium problem on LeetCode. Content not available via public API.
