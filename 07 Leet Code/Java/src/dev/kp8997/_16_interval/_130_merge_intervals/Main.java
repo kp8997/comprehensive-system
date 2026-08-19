@@ -42,10 +42,14 @@ class Solution1 {
             } else {
                 int[] currentItem = list.getLast();
                 if (currentItem[1] >= intervals[i][0]) {
-                    int min = currentItem[0];
+                    // currentItem[0] is always min because the list is sorted
+                    //int min = currentItem[0];
                     int max = Math.max(intervals[i][1], currentItem[1]);
                     // edit the current
-                    list.set(list.size() - 1, new int[]{min, max});
+                    //list.set(list.size() - 1, new int[]{min, max});
+                    // more optimal way
+                    // since min is already the current[0] no need to create new update or update current[0]
+                    list.getLast()[1] = max;
                 } else {
                     // add new
                     list.add(intervals[i]);
