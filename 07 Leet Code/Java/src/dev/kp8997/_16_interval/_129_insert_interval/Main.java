@@ -13,6 +13,44 @@ public class Main {
         int[] newInterval1 = {4, 8};
         System.out.println(Arrays.deepToString(new Solution1().insert(intervals1, newInterval1)));
 
+        int[][] intervals2 = {{1, 2}, {3, 5}, {6, 7}, {8, 10}, {12, 16}, {17, 18}};
+        int[] newInterval2 = {4, 8};
+        System.out.println(Arrays.deepToString(new Solution2().insert(intervals2, newInterval2)));
+    }
+}
+
+class Solution2 {
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        List<int[]> list = new ArrayList<>();
+
+        for (int[] interval : intervals) {
+            // check null first
+            if (newInterval == null) {
+                //this happens after calculation of the insertion of interval, so they are straightly sorted
+                list.add(interval);
+            } else
+            // left
+            if (interval[1] < newInterval[0]) {
+                list.add(interval);
+            }
+            // right
+            else if (interval[0] > newInterval[1]) {
+                // add new merge item when the far right condition happen because they already calculated the process
+                list.add(newInterval);
+                list.add(interval);
+                newInterval = null; // reassign to null after add
+            }
+            // overlap
+            else {
+                newInterval[0] = Math.min(interval[0], newInterval[0]);
+                newInterval[1] = Math.max(interval[1], newInterval[1]);
+            }
+        }
+
+        // handle - intervals is empty
+        if (newInterval != null) list.add(newInterval);
+
+        return list.toArray(new int[list.size()][]);
     }
 }
 
