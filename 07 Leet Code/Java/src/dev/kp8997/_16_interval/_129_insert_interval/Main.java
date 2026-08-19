@@ -18,22 +18,31 @@ public class Main {
 
 class Solution1 {
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        List<int[]> list = new ArrayList<>();
-        for (int[] interval : intervals) {
-            //System.out.println(Arrays.toString(interval));
-            //if (newInterval[0] > interval[1]) {
-            //    continue;
-            //}
-            if (newInterval == null || interval[1] < newInterval[0]) {
-                list.add(interval);
-            } else if (interval[0] < newInterval[0]) {
-                if (interval[1] > newInterval[1]) {
-                    newInterval[1] = interval[1];
-                }
-            }
+        List<int[]> result = new ArrayList<>();
+        int i = 0;
+        int n = intervals.length;
+
+        // Phase 1: Add all intervals ending before newInterval starts
+        while (i < n && intervals[i][1] < newInterval[0]) {
+            result.add(intervals[i]);
+            i++;
         }
 
-        return list.toArray(new int[list.size()][]);
+        // Phase 2: Merge all overlapping intervals into newInterval
+        while (i < n && intervals[i][0] <= newInterval[1]) {
+            newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
+            newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+            i++;
+        }
+        result.add(newInterval); // Insert the merged interval
+
+        // Phase 3: Add all remaining intervals that start after newInterval ends
+        while (i < n) {
+            result.add(intervals[i]);
+            i++;
+        }
+
+        return result.toArray(new int[result.size()][]);
     }
 }
 
