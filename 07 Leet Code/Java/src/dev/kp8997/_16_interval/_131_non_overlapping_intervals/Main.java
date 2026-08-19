@@ -8,6 +8,39 @@ public class Main {
     }
 }
 
+class Solution1 {
+    public int eraseOverlapIntervals(int[][] intervals) {
+        if (intervals == null || intervals.length == 0) {
+            return 0;
+        }
+        // should we sort by endtime?
+        Arrays.sort(intervals, Comparator.comparingInt(o -> o[1]));
+        int numberOfRemoval = 0;
+
+        // not init with lastEnd = 0 because we can have negative value
+        int lastEnd = intervals[0][1];
+        for (int i = 1; i < intervals.length; i++) {
+
+                if (intervals[i][0] < lastEnd) {
+                    // overlap => not choose current end
+                    numberOfRemoval++;
+                } else {
+                    //non-overlap => reassign seed
+                    lastEnd = intervals[i][1];
+                }
+            // purpose is choose the one with the earliest finishing, set the range from the end to end of array
+                // save lastend first
+                // then calculate base on the range from that to the end of the array
+            // continue with it until hit overlap
+                // overlap if new start < last end
+                    // remove the interval of the current (new start) because after sorted, end of new start > lastEnd
+                    // increase counter with 1
+            // not overlap => good to loop
+        }
+        return numberOfRemoval;
+    }
+}
+
 class Solution {
 
     public int eraseOverlapIntervals(int[][] intervals) {
