@@ -27,6 +27,21 @@ class Interval {
      }
  }
 
+
+class Solution2 {
+    public boolean canAttendMeetings(List<Interval> intervals) {
+        Collections.sort(intervals, Comparator.comparing((Interval a) -> a.start));
+        for (int i = 0; i < intervals.size() - 1;i++ ) {
+            if (intervals.get(i).end > intervals.get(i + 1).start) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+
 class Solution {
 
     /**
