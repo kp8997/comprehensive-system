@@ -43,11 +43,6 @@ class Solution2 {
 
 
 class Solution {
-
-    /**
-     * @param intervals: an array of meeting time intervals
-     * @return: if a person could attend all meetings
-     */
     public boolean canAttendMeetings(List<Interval> intervals) {
         int length = intervals.size();
         if (intervals.size() == 0 || length == 1) return true;
