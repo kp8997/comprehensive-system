@@ -86,4 +86,7 @@ Part 3 - Graphs & State Space Exploration
     then return the result
     often calculate the non-overlapping interval first
 
-  Math & Bit Manipulation
+  Math & Bit Manipulation: Exploiting binary representation, modular arithmetic, and base-2 bitwise algebraic laws.
+    1.	XOR Cancellation: A ^ A = 0 and A ^ 0 = A. Used to eliminate paired duplicates (e.g., Single Number).
+	  2.	Bit Clearing Trick: n & (n - 1) systematically flips the least significant set bit (1) to 0. Ideal for counting set bits in O(number of 1s) (e.g., Number of 1 Bits, Counting Bits).
+    3.	Bit Shifts: n >> 1 (divide by 2) and n << 1 (multiply by 2) for rapid arithmetic manipulation without overflow.
