@@ -47,16 +47,41 @@ Part 3 - Graphs & State Space Exploration
 	  3.	Shortest Path (Dijkstra's Algorithm): Use a Min-Heap storing (cost, node) to greedily expand the cheapest path in graphs with non-negative edge weights (e.g., Network Delay Time).
 	  4.	Disjoint Set Union (Union-Find): Maintain dynamic connected components with find() (with path compression) and union() (by rank/size) (e.g., Redundant Connection, Graph Valid Tree).
 
-  Backtracking
+  Backtracking: Systematic exhaustive search of a decision tree by choosing, exploring recursively, and undoing the choice (pruning paths that violate constraints).
+     ```
+     def backtrack(state, choices):
+      if is_solution(state):
+        result.add(state.copy())
+        return
+      for choice in choices:
+        if is_valid(choice):
+            make_choice(choice)      # 1. Choose
+            backtrack(new_state)     # 2. Explore
+            undo_choice(choice)      # 3. Revert (Backtrack)
+    ```
 
-  Heap / Priority Queue
+  Heap / Priority Queue: Continuous dynamic tracking of the Extreme Value (Max or Min) in O(log N) insertion and O(1) retrieval.
+    1. Top-K Elements: Maintain a Min-Heap of fixed capacity $K$. Once size exceeds $K$, evict the minimum element so the heap retains the $K$ largest elements in O(N log K).
+	  2. Two Heaps Pattern: Maintain a Max-Heap for the smaller half of data and a Min-Heap for the larger half to extract the median dynamically in O(1) (e.g., Find Median from Data Stream).
 
-  Dynamic Programming: 1D - 2D
+  Dynamic Programming: 1D - 2D: Breaking an optimization problem into overlapping subproblems with optimal substructure, caching intermediate answers to avoid exponential re-computation.
+    1. Identify the State: What parameters uniquely define a scenario? (e.g., dp[i] for index $i$, dp[i][w] for index $i$ and remaining capacity $w$).
+	  2.
+      Formulate the State Transition Equation (Recurrence Relation):
+		  Decision: dp[i] = max(dp[i - 1], dp[i - 2] + nums[i]) (e.g., House Robber).
+		  Combinations: dp[i] = sum(dp[i - coin]) (e.g., Coin Change).
+		  Grid/String Matching: dp[i][j] = dp[i-1][j-1] + 1 if s[i] == t[j] (e.g., Longest Common Subsequence, Edit Distance).
+	  3. Space Optimization: If computing the current row/step only requires the immediate previous row/step, compress an $O(N^2)$ table into $O(N)$ or $O(1)$ scalar variables.
 
-  Greedy
+  Greedy: Making the locally optimal choice at each step with the guarantee that it leads to a globally optimal solution (without backtracking).
+    1. Local Optimality: The core principle is that the best choice for the current step does not prevent optimal future choices (e.g., buying low/selling high, picking the shortest finishing interval).
+  	2. Proof by Exchange Argument: To prove a greedy strategy works, assume there is an optimal solution that differs at step k. Show that you can swap the greedy choice into that solution without worsening the result.
+	  3. Problem Types: Most commonly applied to Interval problems (sort by end time), Knapsack problems (fractional), andscheduling algorithms.
 
-  Interval
-    sort first
+  Interval: Problems involving the scheduling, merging, or partitioning of ranges on a line.
+    Sort First: The critical first step is always sorting the intervals, typically by the start time, or sometimes by the end time depending on the goal.
+	Calculate the result: then calculate merge or remove or something else
+	Return the result: often calculate the non-overlapping interval first
     then calculate merge or remove or something else
     then return the result
     often calculate the non-overlapping interval first
