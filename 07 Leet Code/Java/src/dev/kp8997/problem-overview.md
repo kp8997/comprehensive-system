@@ -35,7 +35,9 @@ Part 2 - Search & Hierarchical Traversal
 		BFS (Level-Order): Use a Queue. Measure queue.size() at each level to process nodes layer-by-layer (e.g., Binary Tree Level Order Traversal, Right Side View).
 		BST Property Exploitation: In a Binary Search Tree, left < root < right. Use this invariant to search or validate in O(H) time without exploring both subtrees.
 
-  Tries - Prefix Trees
+  Tries - Prefix Trees: A specialized N-ary tree storing character transitions for efficient O(L) prefix lookups.
+    1. Each TrieNode contains a fixed-size array/map of child references (e.g., children[26]) and a boolean flag isEndOfWord.
+	  2. Iterate through each character of a string to traverse or instantiate child nodes sequentially (e.g., Implement Trie, Word Search II).
 
 Part 3 - Graphs & State Space Exploration
 
