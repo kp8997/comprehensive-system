@@ -9,13 +9,10 @@ Part 1 - Linear & Sequential Structures
     Opposite Ends (Converging): Place left = 0 and right = n - 1. If the current sum/metric is too small, increment left; if too large, decrement right (e.g., Two Sum II, Container With Most Water, Trapping Rain Water).
     Fast & Slow (Same Direction): Place one pointer to read/scan and another to write/partition in-place without auxiliary space.
 
-  Sliding Window
-
-  Interval
-    sort first
-    then calculate merge or remove or something else
-    then return the result
-    often calculate the non-overlapping interval first
+  Sliding Window: Tracking a contiguous sub-segment (window) of an array or string that expands or contracts dynamically based on constraints.
+    Fixed Size (Window Size as Variable): Often used for String/Array/Linked-List problems where you must maintain exactly K elements (e.g., Longest Substring with K Distinct Characters, Rotate Array).
+    Dynamic Size (Based on Property): The window expands from the right and contracts from the left to maintain a certain property (e.g., sum >= target, valid parentheses). The loop typically uses a while (left < right) construct inside the for loop (e.g., Minimum Size Subarray Sum, Fruit Into Baskets).
+    Circular Array Adaptation: Use the modulo operator (i % n) to wrap around, allowing a fixed-length array to behave as circular for problems like Maximum Sum Circular Subarray.
 
   Stack
 
@@ -42,5 +39,9 @@ Part 3 - Graphs & State Space Exploration
   Greedy
 
   Interval
-
+    sort first
+    then calculate merge or remove or something else
+    then return the result
+    often calculate the non-overlapping interval first
+    
   Math & Bit Manipulation
