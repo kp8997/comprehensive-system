@@ -25,8 +25,7 @@ class Interval {
          this.start = start;
          this.end = end;
      }
- }
-
+}
 
 class Solution2 {
     public boolean canAttendMeetings(List<Interval> intervals) {
@@ -40,7 +39,6 @@ class Solution2 {
         return true;
     }
 }
-
 
 class Solution {
     public boolean canAttendMeetings(List<Interval> intervals) {
