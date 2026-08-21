@@ -41,7 +41,11 @@ Part 2 - Search & Hierarchical Traversal
 
 Part 3 - Graphs & State Space Exploration
 
-  Graph & Advance Graph
+  Graph & Advance Graph: Modeling entities (nodes) and relationships (edges), traversing them while avoiding infinite cycles via visitation tracking.
+    1.	Grid/Matrix as Graph: Treat cells as nodes and the 4/8 cardinal directions as edges. Use in-place marking or a visited set (e.g., Number of Islands, Rotting Oranges).
+	  2.	Topological Sort (Kahn’s Algorithm / Post-order DFS): Compute in-degree for all nodes in a Directed Acyclic Graph (DAG). Add 0-in-degree nodes to a queue to determine execution order (e.g., Course Schedule).
+	  3.	Shortest Path (Dijkstra's Algorithm): Use a Min-Heap storing (cost, node) to greedily expand the cheapest path in graphs with non-negative edge weights (e.g., Network Delay Time).
+	  4.	Disjoint Set Union (Union-Find): Maintain dynamic connected components with find() (with path compression) and union() (by rank/size) (e.g., Redundant Connection, Graph Valid Tree).
 
   Backtracking
 
