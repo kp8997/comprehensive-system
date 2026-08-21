@@ -25,7 +25,10 @@ Part 1 - Linear & Sequential Structures
 
 Part 2 - Search & Hierarchical Traversal
 
-  Binary Search
+  Binary Search: Halving a monotonic search space O(log N) instead of scanning linearly.
+    Define boundaries low and high. Calculate mid = low + (high - low) / 2.
+		Binary Search on Values / Condition (Predicate Search): If searching for a threshold (e.g., Koko Eating Bananas), construct a monotonic boolean function isFeasible(mid) and adjust low/high accordingly.
+		Rotated Arrays: Identify which half of the array is sorted (nums[low] <= nums[mid] or nums[mid] <= nums[high]), then determine if the target lies within that strictly sorted half.
 
   Tree - BST
 
