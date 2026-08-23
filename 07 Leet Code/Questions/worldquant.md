@@ -13,3 +13,7 @@ Multiple choices: Partition Database
   ***Horizontal (row) parition***
   ***can not combine both of them into the same table***
   Round-robin partition
+
+Statement is not true between thread and process
+  ***Thread can not share memory to each other***
+  One process cannot read from or write to the memory section of another process.
