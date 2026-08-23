@@ -1,10 +1,11 @@
 
 I. Foundation:
   1. Basic Syntax Ruby for programming:
-    1.1 Main syntax and flow around ruby
-    1.2 Around installation
-    1.3 Around built-in and external library
+    1.1 Ruby language literacy
+    1.2 Installation
+    1.3 Built-in and external libraries
     1.4 Relevant tools and application
+    1.5 Summary
 
   2. Objects, methods, variables in literal
 
