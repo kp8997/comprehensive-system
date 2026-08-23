@@ -1,5 +1,6 @@
 
 I. Foundation:
+
   1. Basic Syntax Ruby for programming:
     1.1 Ruby language literacy
     1.2 Installation
@@ -19,4 +20,32 @@ I. Foundation:
 
 II. Built-in classes & Modules:
 
-III. Dynamic Ruby
+  7. Built-in essential
+
+  8. Built-in Objects: String, Symbol, Scalar
+
+  9. Built-in Data structure: Collection and container objects
+
+  10. Built-in Data structure: Collections Central: Enumerable, Enumerator
+
+  11. Regex and String operation *** It should be optional like the way we learn Postgresql ***
+
+  12. File I/O operation
+
+III. Dynamic Ruby: Meta Programming
+
+  13. Object Individuation
+
+  14. Callable and Runnable Object
+
+  15. Callbacks, hooks, and runtime introspection
+
+===================
+
+## Summary
+
+We can tell that:
+
+  part I and II are about the objects from basic to advance
+
+  part III focuses on dynamic object: meta programing
