@@ -1,3 +1,3 @@
 What is IPC
 
-what difference of Thread and Process
+What difference of Thread and Process
