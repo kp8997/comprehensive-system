@@ -1,27 +1,13 @@
-1. Basic Syntax Ruby for programming:
+1. Basic Convention
 
-  1.1 Ruby language literacy
+  Code should simple so we can look their definition, they can tell what they do just by glimpse of. That is the purpose of Ruby: **Simple** and **Concise**. Base on that we have some conventions
 
-    assignment x = 1 + 1
+  Name: Class must be camel case (DocumentContract). other cases (variable, methods, etc.) should be snake case (read_with_filter)
 
-    print: puts, p, print
+  Comment: Not necessary to add it, focus on 'how to use' it instead 'how it work'. Sometimes we need 'how it work' on some special hard case. But when add comment, think of about we can refactor into a simpler form of codebase
 
-    gets: a = gets // save data to variable a
+  Indentation: Should use 2 space for each indent level for not collide with other.
 
-    variable:
+  Parenthesis: Should add for clarity. If the case is too obvious (puts "abc") or empty params, we can skip it.
 
-      local variable: abc_xyz -> exist inside method, curly brackets
-
-      instance variable: @abc_xyz -> exist inside class
-
-      class variable: @@running_total -> exist inside class but shared with all objects of the class
-
-      global variable: $config -> exist in all program
-
-  1.2 Installation
-
-  1.3 Built-in and external libraries
-
-  1.4 Relevant tools and application
-
-  1.5 Summary
+  Line break: A statement a line. If need break line, break after = operator

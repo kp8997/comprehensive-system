@@ -1,3 +1,26 @@
+Usage book:
+
+Eloquent Ruby
+
+Table of content:
+
+I. Basic
+  Chapter 1 to Chapter 9
+
+II. Classes, Modules, Blocks
+  Chapter 10 to Chapter 19
+
+III. Metaprogramming
+  Chapter 20 to Chapter 26
+
+IV. Put them together
+  Chapter 27 to Chapter 31
+
+-----------------------------
+(This is deprecated book for the code base)
+Usabe book:
+
+The Well-Grounded Rubyist
 
 I. Foundation:
 
