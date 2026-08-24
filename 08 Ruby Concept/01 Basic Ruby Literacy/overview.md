@@ -8,6 +8,13 @@
 
     gets: a = gets // save data to variable a
 
+    variable:
+
+      instance variable: @abc_xyz
+
+      class variable: @@running_total
+
+      global variable: $config
 
   1.2 Installation
 
