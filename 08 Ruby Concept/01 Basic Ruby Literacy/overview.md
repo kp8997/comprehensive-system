@@ -10,11 +10,13 @@
 
     variable:
 
-      instance variable: @abc_xyz
+      local variable: abc_xyz -> exist inside method, curly brackets
 
-      class variable: @@running_total
+      instance variable: @abc_xyz -> exist inside class
 
-      global variable: $config
+      class variable: @@running_total -> exist inside class but shared with all objects of the class
+
+      global variable: $config -> exist in all program
 
   1.2 Installation
 
