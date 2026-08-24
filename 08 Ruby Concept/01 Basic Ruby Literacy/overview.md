@@ -11,3 +11,5 @@
   Parenthesis: Should add for clarity. If the case is too obvious (puts "abc") or empty params, we can skip it.
 
   Line break: A statement a line. If need break line, break after = operator
+
+  In-Line syntax: Prefer to use if there is one line of logic.
