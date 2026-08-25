@@ -54,13 +54,15 @@
     
     loop if arguments is hash
       ```
-        def load_font(fonts_specs)
-          fonts_specs.each {|key, value| p "Loading #{key} => #{value}" }
+        def load_movie(config)
+          config.each {|key, value| p "Loading #{key} => #{value}" }
 
           // or
 
-          fonts_specs.each do |entry|
+          config.each do |entry|
             pp entry
           end
         end
+        config = { title: '2001', genre: 'sci fl', rating: 10}
+        load_font(config)
       ```
