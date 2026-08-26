@@ -69,11 +69,12 @@
   Other function/method for array
 
   1. find index with 2 ways
-
+    
+    ```
     def index_for(word)
       i = 0
       words.each do |this_word|
-        return i if word = this_word
+        return i if word == this_word
         i += 1
       end
       nil
@@ -82,5 +83,30 @@
     def index_for(word)
       words.find_index { |w| w == word }
     end
-
+    ```
     
+  2. map
+
+    ```
+    lower_case_words = doc.words.map { |word| word.downcase}
+    ```
+
+  3. inject: we can think of it is reduce in javascript
+
+    ```
+    def average_word_length
+      total = words.inject(0.0) { |result, word| word.size + result}
+      total / word_count
+    end
+    ```
+
+  Bang symbol (exclamation mark (!)): bang means beware of the method -> it mutate the variable
+
+  ```
+  a = [1,2,3]
+  p a.reverse // [3,2,1]
+  p a // [1,2,3]
+
+  p a.reverse! // [3,2,1]
+  p a // [3,2,1]
+  ```
