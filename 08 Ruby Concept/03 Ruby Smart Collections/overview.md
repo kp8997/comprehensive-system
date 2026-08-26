@@ -16,7 +16,7 @@
 
   From the method call (arguments)
 
-    arguments as list params:
+    1. arguments as list params:
       ```
       def echo_all( *args )
         args.each { |arg| puts arg }
@@ -24,7 +24,7 @@
       echo_all( 'one', 'two', 'three' )
       ```
     
-    arguments of arbitrary type:
+    2. arguments of arbitrary type:
     
       ```
       def print(name, size = 12)
@@ -32,7 +32,7 @@
       end
       ```
     
-    a single parameter as array
+    3. a single parameter as array
 
       ```
       def filter_books(books)
@@ -42,7 +42,7 @@
       ```
     ------------------------
 
-    hash as parameters: we can use parenthesis or not when passing the hash argument (only one argument)
+    1. hash as parameters: we can use parenthesis or not when passing the hash argument (only one argument)
 
       ```
       def load_font(fonts_specs)
@@ -52,7 +52,7 @@
       load_font :size => 12, :family => "Arial"
       ```
     
-    loop if arguments is hash
+    2. loop if arguments is hash
       ```
         def load_movie(config)
           config.each {|key, value| p "Loading #{key} => #{value}" }
@@ -66,3 +66,21 @@
         config = { title: '2001', genre: 'sci fl', rating: 10}
         load_font(config)
       ```
+  Other function/method for array
+
+  1. find index with 2 ways
+
+    def index_for(word)
+      i = 0
+      words.each do |this_word|
+        return i if word = this_word
+        i += 1
+      end
+      nil
+    end
+
+    def index_for(word)
+      words.find_index { |w| w == word }
+    end
+
+    
