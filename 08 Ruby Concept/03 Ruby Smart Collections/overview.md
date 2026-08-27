@@ -123,4 +123,4 @@
 
 summarize
   we have map, reduce, filter, sort, some, every in javascript
-  we have map, inject, select, sort, any, all in ruby
+  we have map, inject, filter/select/reject, sort, any, all in ruby
