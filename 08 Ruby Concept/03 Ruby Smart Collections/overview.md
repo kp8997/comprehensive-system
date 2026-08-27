@@ -100,7 +100,7 @@
     end
     ```
 
-  Bang symbol (exclamation mark (!)): bang means beware of the method -> it mutate the variable
+  Bang symbol (exclamation mark (!)): bang means beware of the method -> it mutate the variable. Beside Bang function, some function without bang can also change the source data like pop, push, delete, shift.
 
   ```
   a = [1,2,3]
