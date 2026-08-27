@@ -118,3 +118,9 @@
     array.each_index { |i| array.delete_at(i) if array[i] < 0}
     pp array
   ```
+
+--------------
+
+summarize
+  we have map, reduce, filter, sort, some, every in javascript
+  we have map, inject, select, sort, any, all in ruby
