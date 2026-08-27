@@ -111,7 +111,7 @@
   p a // [3,2,1]
   ```
 
-  4. beware of this
+  4. beware of this, since after delete -10, the index is 1, and will increase to 2, but after deletion, -9 now shifting into index 1 that cause the missing of number
 
   ```
     array = [0, -10, -9, 5, 9]
