@@ -110,3 +110,11 @@
   p a.reverse! // [3,2,1]
   p a // [3,2,1]
   ```
+
+  4. beware of this
+
+  ```
+    array = [0, -10, -9, 5, 9]
+    array.each_index { |i| array.delete_at(i) if array[i] < 0}
+    pp array
+  ```
