@@ -11,6 +11,9 @@ Think of this as my learning journey, they will be more folder as well as topic 
     - Ruby
 
 ## Real Code Challenge Test
+    - nvdia
+    - worldquant
+    - go1
 
 ## Concepts
     - Design system
