@@ -2,7 +2,7 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
   
   1. with quote
 
-    single quote
+    single quote: can not use with interpolation and escapse sequence (\n \t) except for \
       greeting = 'hello, i\'m Johnathan'
       greeting = 'hello, #{name}'
 
@@ -10,15 +10,17 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
       greeting = "hello, #{name}"
       greeting = "hello, \"Johnathan\""
 
-  2. with symbol
+  2. with symbol: %q = '' and %Q = "". So can not use with interpolation and escapse sequence (\n \t) except for \
    
     symbol with ()
-      greeting = %q(
-        hello
-      )
+      greeting = %q(hello)
+      greeting = %Q(hello)
 
     symbol with {}
-      greeting = %Q{
-      hello
-      }
+      greeting = %q{hello}
+      greeting = %Q{hello}
     
+    symbol with []
+      greeting = %q[hello]
+      greeting = %Q[hello]
+      
