@@ -11,9 +11,12 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
       greeting = "hello, \"Johnathan\""
 
   2. with symbol: %q = '' and %Q = "". So can not use with interpolation and escapse sequence (\n \t) except for \
+    symbol %() default to %Q.
+    %q can go with any characters as long as the beginning and ending with a similar string
    
     symbol with ()
       greeting = %q(hello)
+
       greeting = %Q(hello)
 
     symbol with {}
@@ -23,4 +26,12 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
     symbol with []
       greeting = %q[hello]
       greeting = %Q[hello]
+    
+    symbol with <>
+      greeting = %q<hello>
+      greeting = %Q<hello>
+
+    symbol with any characters
+      greeting = %q!hello!
+      greeting = %^hello^
       
