@@ -19,5 +19,11 @@ Some basic of raw Regex. We can divide into 2 types:
 
   2. Match with group (by start with and end with)
 
-    * : zero or any characters
-      [aeiou]* : match with word start with vowel
+    * : zero or any characters. Often use with dot "."
+      [aeiou].*: match with word start with vowel
+
+
+Ruby with Regex
+
+  // =~ ""
+  puts /PM/ =~ '10:24 PM'
