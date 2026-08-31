@@ -46,7 +46,7 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
       index
 
     transform:
-      iterate form: each_char, each_byte, each_line
+      iterate form: each_char, each_byte, each_line, split
     
     inflection facility: it lies in ActiveSupport::Inflector module
 
