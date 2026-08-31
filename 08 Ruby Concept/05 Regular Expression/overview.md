@@ -22,8 +22,19 @@ Some basic of raw Regex. We can divide into 2 types:
     * : zero or any characters. Often use with dot "."
       [aeiou].*: match with word start with vowel
 
+    \A: match with the start of string: /\AOnce upon a time/ =~ "Once upon a time"
+
+    \z: match with the end of string: /time\z/ =~ "Once upon a time"
+
+    ^: match with the start of string: /^Once upon a time/ =~ "Once upon a time"
+
+    $: match with the end of string: /time$/ =~ "Once upon a time"
 
 Ruby with Regex
 
   // =~ ""
   puts /PM/ =~ '10:24 PM'
+
+  //i =~ for case-insensitive match
+
+  //m =~ for multiple lines match
