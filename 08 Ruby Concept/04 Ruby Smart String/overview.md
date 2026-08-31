@@ -71,3 +71,20 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
         camelize: "rails_code".camelize
         underscore: "Pascalize".underscore
         snakize: "underscore_name".snakize
+
+  4. caveat
+
+    String in ruby similar to javascript except for this. Variable assignment is reference
+    ```
+    s = "hello"
+    s[1] = 'd'
+    # javascript can not do this
+    ```
+
+    make the string truely immutable by freeze. will cause error in ruby if modifying
+    ```
+    s.freeze
+    s << "world"
+    ```
+
+  
