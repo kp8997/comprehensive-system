@@ -16,3 +16,5 @@ We can think about symbol as a way to represent a string. It is immutable and ca
 
     In ruby == for comparison with content
     while equal? for comparison with identity (memory reference)
+
+  We have to_s and to_sym methods to convert between string and symbol
