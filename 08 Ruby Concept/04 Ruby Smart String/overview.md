@@ -74,17 +74,21 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
 
   4. caveat
 
-    String in ruby similar to javascript except for this. Variable assignment is reference
+    -String in ruby similar to javascript except for this. Variable assignment is reference
     ```
     s = "hello"
     s[1] = 'd'
     # javascript can not do this
     ```
 
-    make the string truely immutable by freeze. will cause error in ruby if modifying
+    - Make the string truely immutable by freeze. will cause error in ruby if modifying
     ```
     s.freeze
     s << "world"
     ```
 
+    - s[-1] is always the last character: 'o' in 'hello'
+
+    - range operator .. : s[1..3] is 'ell' -> include start and end
+    - range operator ... : s[1...3] is 'el' -> include start exclude end
   
