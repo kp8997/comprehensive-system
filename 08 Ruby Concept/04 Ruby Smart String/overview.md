@@ -35,3 +35,4 @@ Type of String and initialization. Remmber that we can use \ to escapse and #{} 
       greeting = %q!hello!
       greeting = %^hello^
       
+  3. Some api/built-in function for strings
