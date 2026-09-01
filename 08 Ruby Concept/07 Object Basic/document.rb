@@ -27,6 +27,13 @@ class Document
   private :word_count
 end
 
+class RomanceNovel < Document
+  def number_of_steamy_words
+    word_count / 4
+  end
+end
+# Works: self is a Document instance!
+
 doc = Document.new( 'Ethics', 'Spinoza', 'By that which is...' )
 
 doc.about_me
@@ -39,6 +46,9 @@ puts doc.send(:word_count) # this can by pass the private (visibility)
 
 
 pp doc.instance_variables
+rn = RomanceNovel.new('Ethics2', 'Spinoza', 'By that which is 2...')
+puts "This is a romance novel and it has #{rn.number_of_steamy_words} steamy words"
+
 
 # pp doc.public_methods
 # puts "============="
