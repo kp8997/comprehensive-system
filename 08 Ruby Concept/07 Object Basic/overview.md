@@ -4,7 +4,9 @@ Some highlight to remember about Object and class
 
   self: similar to this, it is like default instance of a method. It is also the execution context. 4 points:
     global execution context
-    inside a class (as static methods or variable)
+    inside a class as static methods
+    inside a class as instance methods and instance variable
+    for module: similar to class static
 
   private: have 2 ways
   
