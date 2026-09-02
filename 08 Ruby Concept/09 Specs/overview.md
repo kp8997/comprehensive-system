@@ -32,4 +32,12 @@ Test with Tooling
         allow(@doc).to receive(:word_count).and_return(100)
         expect(@doc).to receive(:word_count)
 
-Isolated test
+================================================
+Summary
+
+Test::Unit::TestCase: simple to add test and quickly for developer, but hard when demand is complexity
+  
+Rspec:
+  more modern focusing on behavior
+  human readiness
+  easy to mock and stub
