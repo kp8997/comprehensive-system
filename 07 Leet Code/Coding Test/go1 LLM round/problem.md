@@ -5,3 +5,5 @@ They provide the problem but not too specific about what need to do, you have to
   fix some UI bugs if AI Agent generate improperly,
   explain in detail,
   give the right specs to verify
+
+Proactively use the agent as much as you can, so they can evaluate base on the usage of it.
