@@ -3,11 +3,28 @@
 2. Break the logic into small pieces ensure that they are simple enough to figure out of what they are doing just by glancing at it
 
 
-Code Example
+Code Example:
 
 First Attempt
 ```ruby
-  
+class TextCompressor
+  attr_reader :unique, :index
+
+  def initialize( text )
+    @unique = []
+    @index = []
+    words = text.split
+    words.each do |word|
+      i = @unique.index(word)
+      if i
+        @index << i
+      else
+        @unique << word
+        @index << unique.size - 1
+      end
+    end
+  end
+end
 ```
 
 Refactored Version
