@@ -2,7 +2,6 @@
 
 2. Break the logic into small pieces ensure that they are simple enough to figure out of what they are doing just by glancing at it
 
-
 Code Example:
 
 First Attempt
