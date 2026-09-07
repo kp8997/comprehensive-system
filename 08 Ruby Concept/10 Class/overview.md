@@ -2,6 +2,8 @@
 
 2. Break the logic into small pieces ensure that they are simple enough to figure out of what they are doing just by glancing at it
 
+3. Try to reuse function as we can
+
 Code Example:
 
 First Attempt
