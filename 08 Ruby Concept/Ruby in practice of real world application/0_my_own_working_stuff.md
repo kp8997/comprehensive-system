@@ -2,6 +2,7 @@
 		homepage/dashbaord: rearrange: widgets and tabs 
 		employee onboarding flow: 
             * some tax and Ni module, 
+            * Enhance some dropdown with lazy load for a ton of payroll information step for classification category - split the data on api to return the less data base on the frontend’s request to boost to speed of loading, and reduce the lagging
             * tax step of onboarding, 
             * certification upload information,
             * Medical discosure
@@ -23,16 +24,23 @@
 		compliance menu
             * content uploaded document page: sidekiq to send emails, template email update, new cronjob to send email
             * Uploaded document: retrieve documents with the right type for api base on Active Record
-            * Induction and content - acknowledgement of policies
+            * Induction and content - acknowledgement of policies 
             * Certification
 		Custom security
 		automated flow: Add new type to shout out automatically flow
-		notification: 
+		notification:
             * celebration with show up a new modal
             * shout out type with show up a new modal
             * Reminder of terminated employee on a new modal that contains action to navigate to others things
-		Tech debt: 
-            * Typescript enhancement, 
+		Task page:
+            * enhance the api usage - eliminate the obsolete component of herodesign
+            * integrity with new api that load a simple version of data
+            * Implementation of bulk delete, bulk complete.
+            * Simplify the edit / create this flow with new components
+		Checklist page:
+            * Fix old bugs relating to the data information display
+		Tech debt:
+            * Typescript enhancement
             * rspec addition in ruby for some modules
             * Snowflake resolve of hero design component on frontend
             * Review and update/remove .erb on ruby - Update specs/cucumber flow for those
