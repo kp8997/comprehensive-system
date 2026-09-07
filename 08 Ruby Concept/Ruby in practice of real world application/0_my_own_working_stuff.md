@@ -50,6 +50,7 @@
             * Mix panel usage unification on many modules
             * Time and formatter enhancement of migration
             * Investigate the possible of automatically replacement of deprecated usage of some library on frontend core (like redux-form)
+    Customer Bug investigate/fix/bad data correct
 		Feature flag interaction: implementation on both frontend and backend, toggle and set the value of the real production
 		Some mobile feature
 		Mobile feature adding - just some minor logic to comply the rule between web and mobile app, involve TestFlight
