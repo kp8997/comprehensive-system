@@ -24,7 +24,7 @@
 		compliance menu
             * content uploaded document page: sidekiq to send emails, template email update, new cronjob to send email
             * Uploaded document: retrieve documents with the right type for api base on Active Record
-            * Induction and content - acknowledgement of policies 
+            * Induction and content - acknowledgement of policies
             * Certification
 		Custom security
 		automated flow: Add new type to shout out automatically flow
@@ -45,6 +45,7 @@
             * Snowflake resolve of hero design component on frontend
             * Review and update/remove .erb on ruby - Update specs/cucumber flow for those
             * Fix some glitches of implementation of some common library of EH
+            * Fix some idor issues - security issues
 		Initiative - Additional work for module instead of team’s tasks
             * Mix panel usage unification on many modules
             * Time and formatter enhancement of migration
@@ -52,3 +53,4 @@
 		Feature flag interaction: implementation on both frontend and backend, toggle and set the value of the real production
 		Some mobile feature
 		Mobile feature adding - just some minor logic to comply the rule between web and mobile app, involve TestFlight
+		SonarQube - Sentry - Datadog
