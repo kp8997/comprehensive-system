@@ -55,3 +55,18 @@
 		Some mobile feature
 		Mobile feature adding - just some minor logic to comply the rule between web and mobile app, involve TestFlight
 		SonarQube - Sentry - Datadog
+
+
+| File | Techniques Learned | JD Match |
+|------|-------------------|----------|
+| `service_base.rb` | Service Object pattern, error accumulation, lifecycle hooks, Template Method | Ownership, quality |
+| `transfer_membership.rb` | DB transactions, race conditions (`RecordNotUnique`), Railway pattern, Outbox pattern | Payment/fintech, PCI, risk thinking |
+| `bank_account.rb` | AES-256 encryption, salted hashing, Strategy pattern validators, audit trails, SQL injection protection | Payment/fintech, PCI-aware |
+| `bulk_delete_worker.rb` | Sidekiq queues, custom exponential backoff, idempotency, ENV config | Redis/Sidekiq |
+| `todo_item_consumer.rb` | Kafka batching, offset management, poison message handling, Datadog tracing | Kafka experience |
+| `cache_management/base.rb` | SHA256 cache keys, dual-key invalidation, Redis TTL | Redis experience |
+| `scheduled_task.rb` | AASM state machine, lifecycle callbacks, timezone-aware queries | Structured thinking |
+| `onboard.rb` | Phased execution, fail-fast, Datadog APM spans, error isolation | Ownership, risk thinking |
+| `transfer_membership_handler.rb` | gRPC thin adapter, Hexagonal Architecture, Protobuf error mapping | Clear communication |
+| `Dockerfile` | Multi-stage builds, Docker secrets, non-root user, layer caching | Cloud/containers, PCI |
+| `quick_add_freemium_csv.rb` | Defensive validation layers, header mapping, Kafka event publishing | Practical mindset |
