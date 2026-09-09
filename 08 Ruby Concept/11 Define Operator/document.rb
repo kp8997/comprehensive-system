@@ -12,4 +12,17 @@ class Document
       content: "#{@content}\n#{other.content}"
     )
   end
+
+  def !
+      Document.new(title: @title, version: @version, content: "It is special exclamation mark")
+  end
+  
 end
+
+doc = Document.new(title: 'hello', version: '1', content: 'hello world!')
+
+puts doc
+
+doc.!
+
+pp doc.!
