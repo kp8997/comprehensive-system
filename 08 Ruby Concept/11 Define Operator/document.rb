@@ -26,3 +26,5 @@ puts doc
 doc.!
 
 pp doc.!
+
+pp !doc
