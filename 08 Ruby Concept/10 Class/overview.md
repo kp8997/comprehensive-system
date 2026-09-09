@@ -6,7 +6,7 @@
   principle: short and coherent
 
 4. Heavy fine-grained methods tend to make classes easier to test.
-  Not everytime we need to separate too much for a piece of logic. Sometimes we can compose of it (the key is make sure it only has a purpose for current function only - no more reuseable)
+  Not everytime we need to separate too much for a piece of logic. Sometimes we can include of them (the key is make sure it only has a purpose for current function only - no more reuseable)
 
 Code Example:
 
