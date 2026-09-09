@@ -17,6 +17,13 @@ class Document
       Document.new(title: @title, version: @version, content: "It is special exclamation mark")
   end
   
+  def +@
+    Document.new(title: @title, version: @version, content: "I'm sure that")
+  end
+
+  def -@
+    Document.new(title: @title, version: @version, content: "I'm doubt that")
+  end
 end
 
 doc = Document.new(title: 'hello', version: '1', content: 'hello world!')
@@ -28,3 +35,5 @@ doc.!
 pp doc.!
 
 pp !doc
+
+pp +(-(+doc))
