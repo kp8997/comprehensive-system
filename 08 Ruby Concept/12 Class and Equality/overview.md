@@ -16,7 +16,7 @@ Remember that we have some point to adhere, careful when override the == operato
 
 === somehow use for regular expression in case when then else end. It follow the check in ==. If we override ==, === will adhere
 
-Hash can use object as key. That is the time we use eql?
+Hash can use object as key. That is the time we use eql?. Mechanism of hash and bucket is similar to java List, threshold in ruby is 8
   a.hash == b.hash
   a.eql?(b)
 
