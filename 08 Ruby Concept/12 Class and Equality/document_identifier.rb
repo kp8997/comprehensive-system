@@ -10,6 +10,7 @@ class DocumentIdentifier
   # without this == between 2 object of DocumentIdentifier will be false
   # because they are 2 different object in memory despite having same value
   def ==(other)
+    return true if other.equal?(self)
     return false unless other.instance_of?(self.class)
     folder == other.folder && name == other.name
   end

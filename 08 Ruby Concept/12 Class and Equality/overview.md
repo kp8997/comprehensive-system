@@ -2,4 +2,4 @@
 
 ==
 
-eql? or equals?
+eql? or equal?
