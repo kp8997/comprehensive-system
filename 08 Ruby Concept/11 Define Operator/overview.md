@@ -10,3 +10,11 @@ Ruby also let us defind single object - unary operator - !
     def !
       Document.new(title, author, "It is special exclamation mark")
     end
+
+  unary call:
+    doc.!
+    !doc
+
+  binary call:
+  sum = a + b
+  sum = a.+(b)
