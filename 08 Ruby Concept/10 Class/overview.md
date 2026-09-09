@@ -3,6 +3,7 @@
 2. Break the logic into small pieces ensure that they are simple enough to figure out of what they are doing just by glancing at it
 
 3. Methods overhead is small when creating new method: just def and end. Approach of creating methods for single responsibility is a good one.
+  principle: short and coherent
 
 4. Heavy fine-grained methods tend to make classes easier to test
 
