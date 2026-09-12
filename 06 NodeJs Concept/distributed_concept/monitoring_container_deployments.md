@@ -25,3 +25,7 @@ Distributed request tracing - Zipkin and Open Telemetry
 Health check & Probe
 	Lagging (CPU):
 	Socket/file/Memory leak
+
+Containers
+
+Deployments
