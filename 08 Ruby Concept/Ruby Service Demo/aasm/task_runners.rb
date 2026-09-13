@@ -5,7 +5,7 @@ class TaskRunner
 
   attr_accessor :retry_count, :error_log
 
-  aasm do
+  aasm(:payment, column: :status, namespace: :payment) do
     state :idle, initial: true
     state :running
     state :completed
