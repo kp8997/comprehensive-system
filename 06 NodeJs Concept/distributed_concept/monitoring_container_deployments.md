@@ -5,7 +5,7 @@ This provides a way to log beside traditional micro console.log to debug data. W
 	use UDP for log to impose low latency. Trade of UDP with guarantee delivery and back pressure control
 	Mark severity level for log
 
-Mechanics: When having trouble or crash, nodejs automatically write to stdout via console.log() on native functions. Docker of host machine (need explicitly specify file log or use external pm lib to do this). Then we can use another service like Filebeat/Fluentd to send to log server over network 
+Mechanics: When having trouble or crash, nodejs automatically write to stdout via console.log() on native functions. Docker of host machine (need explicitly specify file log or use external pm lib to do this). Then we can use another service like Filebeat/Fluentd to send to log server over network
 
 ELK - ElasticSearch, Logstash, Kibana: keep central and process logs -> Indexed and text log
 	L: Ingest and transform log from many services
