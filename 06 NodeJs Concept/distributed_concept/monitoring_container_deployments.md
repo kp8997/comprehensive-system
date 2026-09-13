@@ -13,7 +13,7 @@ ELK - ElasticSearch, Logstash, Kibana: keep central and process logs -> Indexed 
 	K: a dashboard UI for query indexes
 
 StatsD, Graphite, and Grafana: get numeric metrics aggregation for performance, capacity, system health -> Numeric logs
-	StatsD: Listen for incoming metrics over UDP (or TCP), receive log as string (adhere statsD format) and act. There are 3 types of 	act:
+	StatsD: Listen for incoming metrics over UDP (or TCP), receive log as string (adhere statsD format) and act. There are 3 types of act:
 		counter: |c e.g “web-api.inbound.response_code.200:1|c”
 		timer: |ms
 		gauges: |g
