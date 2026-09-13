@@ -24,7 +24,7 @@
 13. [Async Polling — Long-Running Requests](#13-polling)
 14. [Strong Migrations — Safe DB Changes](#14-migrations)
 
----
+------
 
 <a id="1-grpc"></a>
 ## 1. 🌐 gRPC & Protobuf
