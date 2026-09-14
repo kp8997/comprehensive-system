@@ -24,7 +24,7 @@ List items of:
   Race Condition Handler:
 
   aasm: to constraint between states, and function to transition.
-    Example: 
+    Example:
       state_machine :initial => :open do
         state :accepting, :delivering, :closed
 
