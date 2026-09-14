@@ -3,3 +3,13 @@ This is real application lesson learn from my previous several companies that i 
 The structure of this folder may focus on the vital factor first and can help leverage when answer brief questions from interviewer.
 
 List items of:
+
+  gRPC: client server connect, .proto (with shape of request, response and method name ) => generate code needed to call. client call function with payload, callback. server call function with context (request), callback in this case.
+
+  Redis
+
+  SideKiq
+
+  PostgreSQL
+
+  ActiveRecord
