@@ -16,15 +16,17 @@ List items of:
     Index: Columns
     Explain: To optimize logic
     View & Materialized View: View is saved on RAM, Materialized View is save on non-volatile (Disk)
+    Example: tranship membership, transfer hero dollar
 
   ActiveRecord
     Validation:
     Callback (Observable):
 
   Race Condition Handler:
+    Example: Handle the case when 2 process create at the same time => handle with rescue
 
   aasm: to constraint between states, and function to transition.
-    Example:
+    Example: Handle status of kind or report, employee onboarding process, certification status, induction and content status
       state_machine :initial => :open do
         state :accepting, :delivering, :closed
 
