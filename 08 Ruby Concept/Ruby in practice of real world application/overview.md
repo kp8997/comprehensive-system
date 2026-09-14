@@ -13,3 +13,21 @@ List items of:
   PostgreSQL
 
   ActiveRecord
+
+  aasm: to constraint between states, and function to transition.
+    Example: 
+      state_machine :initial => :open do
+        state :accepting, :delivering, :closed
+
+        event :accept do
+          transitions :from => :open, :to => :accepting
+        end
+
+        event :deliver do
+          transitions :from => :accepting, :to => :delivering
+        end
+
+        event :close do
+          transitions :from => [:open, :accepting, :delivering], :to => :closed
+        end
+      end
