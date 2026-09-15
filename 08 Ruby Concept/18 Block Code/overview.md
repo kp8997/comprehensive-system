@@ -57,6 +57,10 @@ We can include the yield in initialize method for wrapping block of code of cons
   end
 ```
 
+Remember that block code use with exeception handle is significantly important than with just iterator (loop all items)
+
+Name method concise and clear base on how method will be used.
+
 =====
 
 To summarize
