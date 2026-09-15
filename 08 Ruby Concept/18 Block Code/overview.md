@@ -40,3 +40,19 @@ class TimeRecorder
   end
 end
 ```
+We can include the yield in initialize method for wrapping block of code of constructor of a class
+
+```ruby
+  class Document
+    def initialize(title, content, author)
+      @title = title
+      @content = content
+      @author = author
+      yield(self) if block_given?
+    end
+  end
+
+  Document.new('Title', 'Content', 'Author') do |doc|
+    puts doc.title
+  end
+```
