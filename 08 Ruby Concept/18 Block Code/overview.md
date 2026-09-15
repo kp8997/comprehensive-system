@@ -56,3 +56,13 @@ We can include the yield in initialize method for wrapping block of code of cons
     puts doc.title
   end
 ```
+
+=====
+
+To summarize
+
+Block code have 4 main style of usage
+  argument: yield value1, value2
+  return value: variable = yield value1, value2
+  execution only: yield
+  constructor of a class: yield(self)
