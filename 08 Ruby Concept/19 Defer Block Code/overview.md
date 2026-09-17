@@ -108,3 +108,16 @@ We have 2 way we block code
       end
     end
   ```
+
+=============
+Summary
+
+We can use block code with 2 main ways and trigger later when some events occur:
+  yield
+  &block - end parameter of a method
+
+We can store the block of code by 2 ways. The main difference are arguments and return, next, break
+  Proc (object - raw chunk of code)
+  lambda (like method way)
+
+Variables of the same context of difinition of block code passing will drag along in memory => should set nil if no use
