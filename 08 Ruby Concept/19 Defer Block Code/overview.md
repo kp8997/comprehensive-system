@@ -22,7 +22,31 @@ We have 2 way we block code
 
   example with lazy initialization. Here is the concept: we pass the way we want with call back provision, until we call the function (content in this case), the real code and the block code will execute at that time:
   ```ruby
-    class ArchivalDocument
+  class BlockBasedArchivalDocument
+    attr_reader :title, :author
+
+    def initialize(title, author, &block)
+      @title = title
+      @author = author
+      @content_generator = block
     end
+
+    def content
+      if @content_generator
+        @content ||= @content_generator.call
+        @content_generator = nil # make it garbage after exec block code
+      end
+      @content
+    end
+  end
+
+  # execution with file
+  doc = BlockBasedArchivalDocument.new('Title', 'Author') { File.read('document.txt') }
+  puts doc.title
+
+  # execution with http
+  google_doc = BlockBasedArchivalDocument.new('http', 'russ') do
+    Net::HTTP.get_response('http://google.com', '/index.html').body
+  end
   ```
   
