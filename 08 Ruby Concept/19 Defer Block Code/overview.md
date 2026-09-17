@@ -49,4 +49,40 @@ We have 2 way we block code
     Net::HTTP.get_response('http://google.com', '/index.html').body
   end
   ```
-  
+
+  Other ways to pre-defined (or default method) to a variable are: - The major difference is in return, next, break way
+
+    lambda : DEFAULT_WITH_LOG = lambda { logger.info { 'Saving document' } }
+
+    Proc : DEFAULT_LOG = Proc.new { logger.info { 'Saving document' } }
+
+    ```ruby
+    # Proc.new Behavior
+    def run_proc
+      my_proc = Proc.new { return "Proc finished!" }
+      my_proc.call
+      "This line will NEVER be reached." # The Proc hijacked the return
+    end
+
+    # Lambda Behavior
+    def run_lambda
+      my_lambda = lambda { return "Lambda finished!" }
+      my_lambda.call
+      "This line WILL be reached and returned." # Execution continues normally
+    end
+    ```
+
+  Another difference is the number of arguments:
+    Proc: execute even if more or less arguments
+    Lambda: execute only if the number of arguments is exact, otherwise raise error
+
+    ```ruby
+    # Procs are forgiving with argument count
+    forgiving_proc = Proc.new { |x, y| puts "x: #{x.inspect}, y: #{y.inspect}" }
+      forgiving_proc.call(1)       # Output: x: 1, y: nil (No error)
+      forgiving_proc.call(1, 2, 3) # Output: x: 1, y: 2   (Ignores the 3)
+
+    # Lambdas are strict with argument count
+    strict_lambda = lambda { |x, y| puts "x: #{x}, y: #{y}" }
+      strict_lambda.call(1)       # Raises ArgumentError: wrong number of arguments (given 1, expected 2)
+    ```
