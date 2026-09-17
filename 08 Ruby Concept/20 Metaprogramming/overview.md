@@ -32,3 +32,8 @@ class ExampleClass
   include InstanceMethod
 end
 ```
+
+Caveat:
+  It is not about how many hooks we are, but how the hooks are used - how they are organized and triggered. Understand this is more important.
+    E.g self.inherited happend for all level of subclasses, not just direct subclasses
+    E.g sometimes, at_exit won't be called
