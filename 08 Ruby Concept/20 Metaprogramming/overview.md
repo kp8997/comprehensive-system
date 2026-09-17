@@ -1,10 +1,14 @@
 there are some hook method of class/module definition (with self - singleton level):
-  self.included(other_module)
-  self.inherited(subclass)
-  self.prepended(other_module)
+  self.included( class ): when a module included by a class
+  self.inherited( subclass )
+  self.prepended( class )
   at_exit do
     puts "good bye"
   end
+  method_missing: when a undefined method is called
+  method_added: when a new method is added (with)
+  trace_var: global variables change hook
+  set_trace_func(&block_code): whenever have an open/close of a class, method call/return,
 
 We can have multiple at_exit, and LIFO (last in, first out) will execute by that order
 
