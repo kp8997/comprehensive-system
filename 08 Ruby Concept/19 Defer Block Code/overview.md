@@ -88,3 +88,23 @@ We have 2 way we block code
     strict_lambda = lambda { |x, y| puts "x: #{x}, y: #{y}" }
     strict_lambda.call(1)       # Raises ArgumentError: wrong number of arguments (given 1, expected 2)
   ```
+
+  **Important note**
+  In the same context of how we define the block code, other scope of context - variables in this case still save in the memory even though we don't use it, it still exists => memory wasting
+  So we should consider to make it available to GC (Garbage Collection) after we done with it by:
+  
+  ```ruby
+    def some_method(doc)
+      big_array = Array.new(1_000_000)
+
+      # ... do something
+
+      # ... don't need big_array anymore
+
+      big_array = nil
+      
+      doc.on_load do |d|
+        puts "Logging when loading"
+      end
+    end
+  ```
