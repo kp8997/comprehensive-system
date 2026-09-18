@@ -18,3 +18,5 @@ end
 ```
 
 We have OpenStruct missing method as example for this
+
+Active Record also make up function for this, like Account.find_by_first_name_and_find_by_last_name
