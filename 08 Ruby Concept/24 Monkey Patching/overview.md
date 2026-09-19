@@ -17,3 +17,6 @@ class String
   end
 end
 ```
+
+Caveat:
+  Monkey patching on major class without precision checking is dangerous. => can break all the ruby features
