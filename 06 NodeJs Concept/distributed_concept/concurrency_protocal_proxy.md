@@ -46,17 +46,17 @@ gRPC: send in .proto file that is binary. Use for internal services communicatio
 
 Cluster module, Reversed Proxy with HAProxy, Load Testing with Autocannon
 
-Cluster is an anti-pattern in distributed system. 
+Cluster is an anti-pattern in distributed system.
 	It can not scale with horizontal servers because it bases on clone the server instance that run on multiple core of CPU.
 	If machine only has 1 core, config it with multiple instances running will degrade performance
-	it can cause other worker starvation mean while a worker is overuse with massive number of requests with gRPC. 
+	it can cause other worker starvation mean while a worker is overuse with massive number of requests with gRPC.
 		Base on gRPC protocol (HTTP/2 over TCP) the TCP connection will keep opening, and http request of gRPC keep coming, 			meanwhile old protocol with HTTP/1 will close TCP connection after http request handled.
 		Cluster master process handle only TCP handshake and pass to the worker, it can not inspect the HTTP request inside
 
-Reversed Proxy: 
+Reversed Proxy:
 	We should use it for NodeJS to offload unnecessary services like HTTPS certificate, health check, security sanitization. Let Nodejs 	focus to handle business request only
 	HAProxy can handle back pressure with maxconn, if too much requests, it will queue (instead of drop out - nodejs http server’s default behavior when reach maxcon)
 
 Load Testing:
-	Criteria: SLA (server uptime - e.g 4 nines), SLO (for api with response time and uptime), 
+	Criteria: SLA (server uptime - e.g 4 nines), SLO (for api with response time and uptime)
 	Benchmark with Autocannon: use for SLO to test threshold of API
