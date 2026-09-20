@@ -17,6 +17,18 @@ class FormLetter < Document
 end
 ```
 
+respond_to? is a method from Object class that check if a method is available for an object, in this case it is 'name' argument.
+We can override it to return true if the method is available. This is useful for method_missing
+
+```ruby
+def respond_to? (name)
+  string_name = name.to_s
+  return true if string_name =~ /"replace \w+/
+  super
+end
+
+```
+
 We have OpenStruct missing method as example for this
 
 Active Record also make up function for this, like Account.find_by_first_name_and_find_by_last_name

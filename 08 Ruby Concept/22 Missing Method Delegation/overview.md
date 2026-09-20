@@ -1,5 +1,22 @@
 We can use method_missing to delegate method. In a scenarios that a subclass want to use functionality from its superclass. We can define missing_method and send the method name after have some conditional check
 
+We can check before delegate to superclass object
+
+```ruby
+class SuperSecretDocument
+  DELEGATED_METHODS = [ :content, :words ]
+
+  def method_missing (name, *args)
+    check_for_expiration
+    if DELEGATED_METHODS.include? ( name )
+      @original_document. send (name, *args)
+    else
+      super
+    end
+  end
+end
+```
+
 We can use inherit pattern to avoid unnecessary delegation: Example with to_s, that inherit from Object. The case is we only want the to_s from Document or raise error after timer expired. Set this as example:
 
 ```ruby
