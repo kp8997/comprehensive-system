@@ -138,7 +138,7 @@ class StructuredDocument
     size = options [: font_size] || 12
     emphasis = options [: font_emphasis] || :none
 
-    define_method(paragraph_name) do |text |
+    define_method(paragraph_name) do |text|
       paragraph = Paragraph.new( name, size, emphasis, text )
       self << paragraph
     end
