@@ -110,4 +110,20 @@ class StructuredDocument
   end
   #...
 end
+
+class Instructions < StructuredDocument
+  paragraph_type( :introduction,
+    :font_name => sarial,
+    :font_size => 18,
+    :font_emphasis => :italic )
+# And so on...
+end
+
+# result code created will be:
+=begin
+  def introduction (text)
+    p = Paragraph.new(:arial, 18, :italics, text)
+    self << p
+  end
+end
 ```
