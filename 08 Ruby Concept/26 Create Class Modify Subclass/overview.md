@@ -48,7 +48,7 @@ end
 The problem is if we have many documents, so we have to add paragraph like this. The first solution is we will try to add a new class that help init this so we can reduce the repetitious code
 
 ```ruby
-# Refactor 1
+# Refactor 1 - Pre-define some instance method that help create code
 class Resume < StructuredDocument
   def name ( text )
     paragraph = Paragraph.new( :nimbus, 14, :bold, text )
@@ -93,6 +93,7 @@ end
 ```
 
 ```ruby
+# Refactor 2 - reduce code by execution in dynamic function call with class_eval
 class StructuredDocument
   def self.paragraph_type ( paragraph_name, options )
     name = options [:font_name] || :arial
