@@ -48,21 +48,40 @@ end
 The problem is if we have many documents, so we have to add paragraph like this. The first solution is we will try to add a new class that help init this so we can reduce the repetitious code
 
 ```ruby
+# Refactor 1
 class Resume < StructuredDocument
   def name ( text )
     paragraph = Paragraph.new( :nimbus, 14, :bold, text )
-    self < paragraph
+    self << paragraph
   end
 
   def address ( text )
     paragraph = Paragraph.new( :nimbus, 12, :italic, text )
-    self < paragraph
+    self << paragraph
   end
 
   def email ( text )
     paragraph = Paragraph.new( :nimbus, 12, :none, text )
-    self < paragraph
+    self << paragraph
   end
+end
+
+class Instructions < StructuredDocument
+  def introduction ( text )
+    paragraph = Paragraph.new( :mono, 14, none, text )
+    self << paragraph
+  end
+
+  def warning( text )
+    paragraph = Paragraph.new( sarial, 22, :bold, text )
+    self << paragraph
+  end
+
+  def step ( text )
+    paragraph = Paragraph.new( :nimbus, 14, :none, text )
+    self << paragraph
+  end
+# and so on
 end
 
 # now we only have to do this instead of create paragraph ourself
@@ -74,21 +93,20 @@ end
 ```
 
 ```ruby
-class Instructions < StructuredDocument
-  def introduction ( text )
-    paragraph = Paragraph.new( :mono, 14, none, text )
-    self < paragraph
-  end
+class StructuredDocument
+  def self.paragraph_type ( paragraph_name, options )
+    name = options [:font_name] || :arial
+    size = options [:font_size] || 12
+    emphasis = options [:font_emphasis] || :normal
 
-  def warning( text )
-    paragraph = Paragraph.new( sarial, 22, :bold, text )
-    self « paragraph 
+    code = %Q{
+      def #{paragraph_name} (text)
+        p = Paragraph.new(:#{name}, #{size}, :#{emphasis}, text)
+        self << p
+      end
+    }
+    class_eval ( code )
   end
-
-  def step ( text )
-    paragraph = Paragraph.new( :nimbus, 14, :none, text )
-    self¿¿ paragraph
-  end
-# and so on
+  #...
 end
 ```
