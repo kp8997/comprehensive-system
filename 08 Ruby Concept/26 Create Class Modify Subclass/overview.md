@@ -127,3 +127,22 @@ end
   end
 end
 ```
+
+
+```ruby
+# Refactor 3 - We use define method to make it more concise
+
+class StructuredDocument
+  def self.paragraph_type( paragraph_name, options )
+    name = options [:font_name] || :arial
+    size = options [: font_size] || 12
+    emphasis = options [: font_emphasis] || :none
+
+    define_method(paragraph_name) do |text |
+      paragraph = Paragraph.new( name, size, emphasis, text )
+      self << paragraph
+    end
+  end
+#.••
+end
+```
