@@ -146,3 +146,5 @@ class StructuredDocument
 #.••
 end
 ```
+
+We use the purpose of define_method is to define a method dynamically instead of string eval (class_eval) since it has security issue
