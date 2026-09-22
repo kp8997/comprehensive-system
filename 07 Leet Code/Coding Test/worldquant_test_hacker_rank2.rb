@@ -47,4 +47,8 @@ order by
 
 9. UDP is connectionless and low bandwidth for a package.
 
+10. SQL Injection
+
+11. SDLC with defect triage meeting to what?
+
 =end
