@@ -45,5 +45,6 @@ order by
 
 8. multiple choice: idempotency between methods: GET, PUT, PATCH, POST, DELETE, HEAD. what is the one not idempotency?
 
-9.
+9. UDP is connectionless and low bandwidth for a package.
+
 =end
