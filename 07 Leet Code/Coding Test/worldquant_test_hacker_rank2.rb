@@ -51,4 +51,7 @@ order by
 
 11. SDLC with defect triage meeting to what?
 
+12.
+
+13.
 =end
