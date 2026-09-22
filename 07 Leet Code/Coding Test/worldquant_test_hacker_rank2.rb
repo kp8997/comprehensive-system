@@ -40,4 +40,10 @@ order by
 5. multiple choice: pseudo css after-fist-line: not exist
 
 6. multiple choice: idempotency - REST API method for POST: cache, create.
+
+7. multiple choice: HTTP restricted resource status code? 401, 402, 403, 404
+
+8. multiple choice: idempotency between methods: GET, PUT, PATCH, POST, DELETE, HEAD. what is the one not idempotency?
+
+9.
 =end
