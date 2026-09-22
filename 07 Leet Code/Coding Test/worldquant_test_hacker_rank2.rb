@@ -28,4 +28,10 @@ event 1 has structure like
 Given that tickets_price have 3 kinds of value: normal, premium, vip corresponding to [10, 20, 30]
 find the best profit of all data
 
+3. SQL kind of easy
+select
+join
+where
+group by
+order by
 =end
