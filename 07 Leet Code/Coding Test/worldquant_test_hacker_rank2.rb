@@ -34,4 +34,8 @@ join
 where
 group by
 order by
+
+4. multiple choice: prefetch
+
+5. multiple choice: pseudo css after-fist-line: not exist
 =end
