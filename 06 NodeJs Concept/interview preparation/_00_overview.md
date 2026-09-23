@@ -3,7 +3,7 @@ Because Elfie specifically lists Google Cloud Platform (GCP), Vertex AI, and Ope
 
 LLM Fundamentals & Architecture:
   "How do you differentiate between fine-tuning, embeddings for RAG (Retrieval-Augmented Generation), and prompt chaining for backend workflows?"
-  
+
   "How do you ensure deterministic JSON outputs from non-deterministic LLMs when orchestrating downstream backend services?"
 
 Production Engineering (Vertex AI / OpenAI):
@@ -37,14 +37,20 @@ Networking & Protocols:
 
 3. System Design & Architectural Resilience
 The second image highlights the core philosophy interviewers look for: "Build systems that can fail, not just systems that can run."
+
 Idempotency & Distributed Consistency:
-"How do you guarantee strict idempotency in gamified point distribution or rewards (e.g., preventing duplicate points when a mobile client retries an interrupted network request)?"
-"How would you architect a distributed job queue using BullMQ/Redis or GCP Pub/Sub to handle workers crashing halfway through processing without losing messages?"
-Fault Tolerance & Availability:
-"What failover patterns (Circuit Breaker, Exponential Backoff with Jitter, Dead-Letter Queues) do you apply when an external service or database goes down?"
-"How do you handle database failover and replica lag when orchestrating writes to primary nodes and reads from read-replicas?"
+  
+  "How do you guarantee strict idempotency in gamified point distribution or rewards (e.g., preventing duplicate points when a mobile client retries an interrupted network request)?"
+  
+  "How would you architect a distributed job queue using BullMQ/Redis or GCP Pub/Sub to handle workers crashing halfway through processing without losing messages?"
+  Fault Tolerance & Availability:
+  
+  "What failover patterns (Circuit Breaker, Exponential Backoff with Jitter, Dead-Letter Queues) do you apply when an external service or database goes down?"
+  
+  "How do you handle database failover and replica lag when orchestrating writes to primary nodes and reads from read-replicas?"
+
 Mobile-Specific API Design:
-"How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
+  "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
 
 4. Node.js & Python Ecosystem Experience
 Elfie requires both Python and Node.js for their microservices backend.
