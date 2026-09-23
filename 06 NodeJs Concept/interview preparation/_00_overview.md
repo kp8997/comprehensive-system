@@ -1,25 +1,39 @@
 1. AI Basics & LLM in Production
 Because Elfie specifically lists Google Cloud Platform (GCP), Vertex AI, and OpenAI for a consumer health app, expect questions about integration, data security, and API resilience rather than low-level model training.
+
 LLM Fundamentals & Architecture:
-"How do you differentiate between fine-tuning, embeddings for RAG (Retrieval-Augmented Generation), and prompt chaining for backend workflows?"
-"How do you ensure deterministic JSON outputs from non-deterministic LLMs when orchestrating downstream backend services?"
+  "How do you differentiate between fine-tuning, embeddings for RAG (Retrieval-Augmented Generation), and prompt chaining for backend workflows?"
+  
+  "How do you ensure deterministic JSON outputs from non-deterministic LLMs when orchestrating downstream backend services?"
+
 Production Engineering (Vertex AI / OpenAI):
-"How do you handle severe rate-limiting (429 Too Many Requests), latency spikes (TTFT - Time to First Token), and token context window limits in high-throughput backend services?"
-"How do you safeguard user PII (Personally Identifiable Information) or sensitive medical health data before transmitting prompts to 3rd-party LLM providers?"
-"What is your strategy for semantic caching (e.g., using Redis Vector Search) to reduce external API costs and latency?"
+  "How do you handle severe rate-limiting (429 Too Many Requests), latency spikes (TTFT - Time to First Token), and token context window limits in high-throughput backend services?"
+
+  "How do you safeguard user PII (Personally Identifiable Information) or sensitive medical health data before transmitting prompts to 3rd-party LLM providers?"
+
+  "What is your strategy for semantic caching (e.g., using Redis Vector Search) to reduce external API costs and latency?"
 
 2. Computer Science Core (Data Structures, Algorithms, OS, & Networks)
 At a senior level, these questions focus on computational complexity and runtime trade-offs.
+
 Data Structures & Algorithms:
-"How would you implement a sliding-window counter or a token-bucket algorithm in memory vs. across distributed nodes for an API rate limiter?"
-"When would you pick a Min-Heap or B-Tree over a Hash Table for scheduling tasks or query indexing?"
-Operating Systems & Node.js Runtime:
-"Explain the Node.js Event Loop phases (timers, pending callbacks, poll, check, close). Where do process.nextTick() and setImmediate() execute?"
-"How does the Node.js V8 memory model manage the heap and stack? How do you diagnose and resolve memory leaks using heap snapshots?"
-"How does Node.js leverage libuv worker threads, and what happens to the event loop if CPU-bound cryptographic operations or regex execution block the main thread?"
+
+  "How would you implement a sliding-window counter or a token-bucket algorithm in memory vs. across distributed nodes for an API rate limiter?"
+
+  "When would you pick a Min-Heap or B-Tree over a Hash Table for scheduling tasks or query indexing?"
+  Operating Systems & Node.js Runtime:
+
+  "Explain the Node.js Event Loop phases (timers, pending callbacks, poll, check, close). Where do process.nextTick() and setImmediate() execute?"
+
+  "How does the Node.js V8 memory model manage the heap and stack? How do you diagnose and resolve memory leaks using heap snapshots?"
+
+  "How does Node.js leverage libuv worker threads, and what happens to the event loop if CPU-bound cryptographic operations or regex execution block the main thread?"
+
 Networking & Protocols:
-"Explain the TCP 3-way handshake and head-of-line blocking. Why migrate from HTTP/1.1 to HTTP/2 or HTTP/3 (QUIC) for mobile app backend communication?"
-"What mechanisms prevent TCP socket exhaustion in a high-concurrency Node.js API gateway making upstream microservice calls?"
+
+  "Explain the TCP 3-way handshake and head-of-line blocking. Why migrate from HTTP/1.1 to HTTP/2 or HTTP/3 (QUIC) for mobile app backend communication?"
+
+  "What mechanisms prevent TCP socket exhaustion in a high-concurrency Node.js API gateway making upstream microservice calls?"
 
 3. System Design & Architectural Resilience
 The second image highlights the core philosophy interviewers look for: "Build systems that can fail, not just systems that can run."
