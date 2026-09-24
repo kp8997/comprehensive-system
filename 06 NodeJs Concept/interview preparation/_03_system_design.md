@@ -16,3 +16,13 @@ Idempotency & Distributed Consistency:
 Mobile-Specific API Design:
 
   "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
+
+    "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
+
+      "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
+
+        "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
+
+          "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
+
+            "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
