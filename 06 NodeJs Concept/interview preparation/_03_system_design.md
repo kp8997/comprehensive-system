@@ -1,4 +1,5 @@
 3. System Design & Architectural Resilience
+
 The second image highlights the core philosophy interviewers look for: "Build systems that can fail, not just systems that can run."
 
 Idempotency & Distributed Consistency:
