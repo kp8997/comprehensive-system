@@ -50,25 +50,37 @@ Idempotency & Distributed Consistency:
   "How do you handle database failover and replica lag when orchestrating writes to primary nodes and reads from read-replicas?"
 
 Mobile-Specific API Design:
+
   "How do you optimize mobile payload sizes and manage schema versioning across multiple legacy client versions in production?"
 
 4. Node.js & Python Ecosystem Experience
 Elfie requires both Python and Node.js for their microservices backend.
+
 Node.js (Core Runtime):
-"How do you handle stream pipelines and backpressure when streaming large files or continuous data streams without exceeding RAM boundaries?"
-"What is your preferred clustering and process management strategy in containerized Docker/GCP environments (e.g., single process per container vs. Node cluster module)?"
+  "How do you handle stream pipelines and backpressure when streaming large files or continuous data streams without exceeding RAM boundaries?"
+
+  "What is your preferred clustering and process management strategy in containerized Docker/GCP environments (e.g., single process per container vs. Node cluster module)?"
+
 Python Interoperability & Tooling:
-"Python uses a Global Interpreter Lock (GIL) and an asyncio event loop. How does Python's concurrency model contrast with Node.js event-driven architecture?"
-"How do you structure microservice boundaries when Python is used for AI/data tasks and Node.js serves customer-facing REST/gRPC endpoints?"
+  "Python uses a Global Interpreter Lock (GIL) and an asyncio event loop. How does Python's concurrency model contrast with Node.js event-driven architecture?"
+
+  "How do you structure microservice boundaries when Python is used for AI/data tasks and Node.js serves customer-facing REST/gRPC endpoints?"
+
 Databases & DevOps (GCP & NoSQL):
-"What data modeling strategies do you apply in NoSQL (e.g., MongoDB, DynamoDB, Firestore) for one-to-many relationships: embedding vs. referencing?"
-"How do you construct CI/CD pipelines, optimize multi-stage Docker builds, and configure health/readiness probes on Kubernetes/Cloud Run?"
+  "What data modeling strategies do you apply in NoSQL (e.g., MongoDB, DynamoDB, Firestore) for one-to-many relationships: embedding vs. referencing?"
+
+  "How do you construct CI/CD pipelines, optimize multi-stage Docker builds, and configure health/readiness probes on Kubernetes/Cloud Run?"
 
 5. Problem-Solving & Technical Troubleshooting
+
 Expect scenario-based production triage questions:
-"Your Node.js service suddenly reports CPU usage spiking to 100% and response latency increasing by 500ms. Walk through your step-by-step triage and diagnostic plan."
-"A batch of reward notifications sent identical duplicate push messages to thousands of mobile users. How do you find the root cause, mitigate the immediate issue, and ensure it cannot recur?"
+
+  "Your Node.js service suddenly reports CPU usage spiking to 100% and response latency increasing by 500ms. Walk through your step-by-step triage and diagnostic plan."
+
+  "A batch of reward notifications sent identical duplicate push messages to thousands of mobile users. How do you find the root cause, mitigate the immediate issue, and ensure it cannot recur?"
 
 6. Communication & Leadership
+
 "How do you handle trade-offs between code perfection and rapid startup iteration when deadlines are tight?"
+
 "Describe a time you delivered critical feedback during a pull request review to an engineer who strongly disagreed with your architectural recommendation."
