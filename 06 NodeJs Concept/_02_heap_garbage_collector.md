@@ -14,9 +14,8 @@ Heap Architecture
 
 Garbage Collector
   1. Scavenger (mini GC): for Young Generation
+  
   2. Mark Sweep Compact (major GC): for Old Generation: 3 phases
     Marking: identify reachable object base on root references, using with tri-color scheme White, Gray, Black
     Sweeping: traverses unreachable (White) object and register the pointer of them into free list for future allocations
     Compacting: compact the memory by moving reachable objects closer together to reduce fragmentation
-
-  
