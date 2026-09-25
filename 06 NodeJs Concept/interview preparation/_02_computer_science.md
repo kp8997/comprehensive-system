@@ -9,7 +9,7 @@ Data Structures & Algorithms:
 
     => distributed nodes so we have multiple instance - nodes. Use redis with lua script to leverage atomic update. Multiple node retrieve redis to get data about rate limiter
 
-    => token-bucket and sliding window usage are to make sure the number of requests per minute must be uniformly distributed
+    => token-bucket and sliding window usage are to make sure the number of requests per minute must be uniformly distributed. token bucket: 2 requests per 5 seconds. sliding window: 10 requests exactly in every 1 minute
 
   "When would you pick a Min-Heap or B-Tree over a Hash Table for scheduling tasks or query indexing?"
 
