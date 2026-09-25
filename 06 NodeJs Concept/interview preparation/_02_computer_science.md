@@ -5,6 +5,12 @@ Data Structures & Algorithms:
 
   "How would you implement a sliding-window counter or a token-bucket algorithm in memory vs. across distributed nodes for an API rate limiter?"
 
+    => in memory so we have single node. We can use Map in javascript to store data
+
+    => distributed nodes so we have multiple instance - nodes. Use redis with lua script to leverage atomic update. Multiple node retrieve redis to get data about rate limiter
+
+    => token-bucket and sliding window usage are to make sure the number of requests per minute must be uniformly distributed
+
   "When would you pick a Min-Heap or B-Tree over a Hash Table for scheduling tasks or query indexing?"
 
 Operating Systems & Node.js Runtime:
