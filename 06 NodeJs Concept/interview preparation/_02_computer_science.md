@@ -6,7 +6,8 @@ Data Structures & Algorithms:
   "How would you implement a sliding-window counter or a token-bucket algorithm in memory vs. across distributed nodes for an API rate limiter?"
 
   "When would you pick a Min-Heap or B-Tree over a Hash Table for scheduling tasks or query indexing?"
-  Operating Systems & Node.js Runtime:
+
+Operating Systems & Node.js Runtime:
 
   "Explain the Node.js Event Loop phases (timers, pending callbacks, poll, check, close). Where do process.nextTick() and setImmediate() execute?"
 
