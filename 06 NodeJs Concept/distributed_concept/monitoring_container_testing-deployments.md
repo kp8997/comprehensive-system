@@ -36,4 +36,4 @@ Containers
 
 	K8s Service Discovery: Services assign stable internal DNS names that forward traffic across Pods using label selectors.
 
-Deployments
+Testing Deployments CI/CD
