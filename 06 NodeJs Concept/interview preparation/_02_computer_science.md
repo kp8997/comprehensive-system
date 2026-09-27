@@ -13,6 +13,10 @@ Data Structures & Algorithms:
 
   "When would you pick a Min-Heap or B-Tree over a Hash Table for scheduling tasks or query indexing?"
 
+    => Schedule Task: use Min-Heap over Hash table because big O of finding the smallest value is O(1), mean while in Hash Table is O(n) (we have to iterate over all elements in hash table - it is Object (nodejs) or hash (ruby)). Hash table make the natural order of the schedule lost
+
+    => Query Indexing: use B-Tree over Hash table. Hash table is good for exact match query, but B-Tree is good for range query (find all values between x and y).
+
 Operating Systems & Node.js Runtime:
 
   "Explain the Node.js Event Loop phases (timers, pending callbacks, poll, check, close). Where do process.nextTick() and setImmediate() execute?"
