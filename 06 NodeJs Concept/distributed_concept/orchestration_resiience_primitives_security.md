@@ -18,6 +18,7 @@ Resilience
         Call process.exit(1) and let the container (k8s/docker) auto restart instance
 
     2. Build stateless service and apply single source of truth
+      We can respond error early and exit the current request
 
     3. Memory - Unbounded memory and bounded caching
 
