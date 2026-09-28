@@ -18,7 +18,9 @@ Resilience
         Call process.exit(1) and let the container (k8s/docker) auto restart instance
 
     2. Build stateless service and apply single source of truth
-      We can respond error early and exit the current request
+      Eliminate Hidden Local State
+      Shift Responsibility on Failure: surface a structured 5xx error back to the client early, pushing the responsibility of retrying the state modification back to the caller.
+      Offload to External Brokers: To survive sudden process death, all distributed transaction state must be offloaded to external message brokers or event logs
 
     3. Memory - Unbounded memory and bounded caching
 
