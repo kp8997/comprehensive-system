@@ -43,6 +43,13 @@ Resilience
 
     Add random factor of retry time / request: const retryTime = Math.random() * (baseTime * 0.2) + baseTime * 0.9;
 
+    The Circuit Breaker Pattern: to avoid flooding requests to struggling service,
+      3 state
+      - closed: normal
+        When request fail at first
+      - open: after X request fail, we will open the circuit and return error immediately
+      - half-open: after Y seconds, we will let some request pass through to check if the service is recovered. If not recover back to open, if yes back to closed.
+
     6. Chaos Engineering & Resilience Testing: Senior engineers do not rely solely on the "happy path". Simulated Chaos Boundaries:
 
       Random Crashes: Simulating an abrupt process.exit() to verify that the orchestrator (Kubernetes) brings up a new pod and the client-side retries succeed without data loss.
