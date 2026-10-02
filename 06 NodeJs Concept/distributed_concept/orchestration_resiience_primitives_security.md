@@ -60,13 +60,15 @@ Resilience
 
 Distributed Primitives
 
-  1.
+  1. Race Condition
 
-  2.
+  2. Transaction
 
-  3.
+  3. Atomic
 
-  4.
+  4. Lock
+
+  5. Deadlock
 
 Security
 
@@ -77,3 +79,5 @@ Security
   3.
 
   4.
+
+  5. 
