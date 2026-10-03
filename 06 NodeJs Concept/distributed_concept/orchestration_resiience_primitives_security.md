@@ -62,13 +62,13 @@ Distributed Primitives
 
   1. Race Condition
 
-  2. Transaction
+  2. Redis
+  
+  3. Atomicity
 
-  3. Atomic
+  4. Transaction
 
-  4. Lock
-
-  5. Deadlock
+  5. Lua scripting - Atomicity guarantee for multiple commands
 
 Security
 
