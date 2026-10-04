@@ -72,12 +72,14 @@ Distributed Primitives
 
 Security
 
-  1.
+  1. Recognize attack surface
 
-  2.
+    1. Parameter checking
 
-  3.
+    2. Avoid malicious npm package
 
-  4.
+  2. Application configuration
 
-  5. 
+  3. Upgrading dependencies
+
+  4. Upgrading nodejs version
