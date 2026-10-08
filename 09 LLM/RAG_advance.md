@@ -7,10 +7,11 @@ Advance flow: We can add more flow before sending data to LLM
   Then select top k (3-5 chunks)
   Send to LLM for generating answer
   
-
 Temperature in LLM:
 
 Problem
   Security:
     Avoid injection prompt by user - sanitize prompt
     How to:
+
+We can calculate
