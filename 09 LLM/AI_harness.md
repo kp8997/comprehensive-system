@@ -12,7 +12,7 @@ User ask question with prompt
     Check if token too long or too short
     Compression prompt data
   Execution
-    Call with pattern - time duration log start
+    Call with pattern - time duration log start - Early fail if similarity score too low => save token for LLM
     Resilient with retry - circuit breaker pattern + exponential backoff
     Fallback: call to other LLM (Anthropic, OpenAI)
   Egress:
@@ -21,4 +21,4 @@ User ask question with prompt
   Log:
     Time duration - stop
     Log information about step
-    Calcu
+    Calculate token - estimate cost
