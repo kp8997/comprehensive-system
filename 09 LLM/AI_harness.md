@@ -4,4 +4,21 @@ User/Admin upload file
   Sanitize file
 
 User ask question with prompt
-  Sanitize prompt make sure they don't inject with malicious prompt
+  Ingress:
+    Sanitize prompt make sure they don't inject with malicious prompt
+    Schema validation: payload typescript check
+    Re-rank similarity between prompt and data
+  Context Filter:
+    Check if token too long or too short
+    Compression prompt data
+  Execution
+    Call with pattern - time duration log start
+    Resilient with retry - circuit breaker pattern + exponential backoff
+    Fallback: call to other LLM (Anthropic, OpenAI)
+  Egress:
+    Check output schema
+    Self Correct by LLM if output is not match schema or invalid output
+  Log:
+    Time duration - stop
+    Log information about step
+    Calcu
