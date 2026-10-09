@@ -2,6 +2,8 @@ User/Admin upload file
   Malware check for file,
   Filter or check if have individual, private information
   Sanitize file
+  Calculate vector in dimensions for chunks
+  Save to vector to postgresql
 
 User ask question with prompt
   Ingress:
